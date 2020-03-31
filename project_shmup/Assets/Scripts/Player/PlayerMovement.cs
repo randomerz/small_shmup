@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     // this comment was made by Kenneth
+    // this comment was made by Max
     void Start()
     {
         
