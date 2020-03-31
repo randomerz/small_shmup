@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     // this comment was made by Kenneth
     // this comment was made by Max
+    // this comment was made by Ethan
 
-    // Controls: WASD for normal movement
+    // Controls: arrows for normal movement
+    // Z and X for bomb and shoot
     void Start()
     {
         
