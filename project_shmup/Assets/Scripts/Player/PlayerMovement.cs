@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // this comment was made by Kenneth
     // this comment was made by Max
     // this comment was made by Ethan
+    // this comment was made by Boomo
 
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
