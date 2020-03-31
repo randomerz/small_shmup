@@ -12,7 +12,7 @@ public class PlayerB : Projectile
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position += transform.up * speed * Time.deltaTime;
     }
