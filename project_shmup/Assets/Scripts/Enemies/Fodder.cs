@@ -13,6 +13,6 @@ public class Fodder : Enemy
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(3 * Time.deltaTime, 144, 0);
+        transform.position = transform.position + new Vector3(moveSpeed * Time.deltaTime, 0, 0);
     }
 }
