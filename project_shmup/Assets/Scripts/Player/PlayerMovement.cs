@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // this comment was made by Kenneth part 2
-    // this comment was made by Max
-    // this comment was made by Ethan
-    // this comment was made by Boomo
-	// >:)
-
+    float speed = 12.0f; // player speed
+    Vector3 move; // directional vector
+    
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
     void Start()
@@ -21,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+    }
+    
+    void FixedUpdate()
+    {
+        transform.position += move * speed * Time.deltaTime; // basic player movement
     }
 }
