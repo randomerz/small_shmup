@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Fodder : Enemy
 {
-    int direction = 1;
+    //1 is moving right, -1 is moving left
+    public int direction = 1;
     // Start is called before the first frame update
     void Start()
     {
