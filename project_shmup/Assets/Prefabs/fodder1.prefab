@@ -97,7 +97,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   moveSpeed: 4
+  moveSpeedSide: 5
   bullet: {fileID: 0}
+  leftBound: -13
+  rightBound: 13
+  topBound: 9
+  bottomBound: -9
+  timeSinceTurn: 0
+  turnRate: 1
+  offset: -1
   direction: 1
 --- !u!61 &5609964187031677963
 BoxCollider2D:

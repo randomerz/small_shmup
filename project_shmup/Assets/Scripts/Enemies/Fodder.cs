@@ -8,30 +8,32 @@ public class Fodder : Enemy
     public float rightBound = 13;
     public float topBound = 9;
     public float bottomBound = -9;
+    public float timeSinceTurn;
+    public float turnRate = 1.0f;
     //distance from anchor of object to outside of hitbox
-    public float offset = 0.9f;
+    public float offset = -1.0f;
     //1 is moving right, -1 is moving left
-    //public int direction = 1;
+    public int direction = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeSinceTurn = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (transform.position.x >= 15 || transform.position.x <= -15)
+        timeSinceTurn += Time.deltaTime;
+        if (timeSinceTurn > turnRate)
         {
             direction = direction * -1;
+            timeSinceTurn = 0;
         }
-        transform.position = transform.position + new Vector3(moveSpeed * Time.deltaTime * direction, 0, 0);
-        */
+        
         if (transform.position.y <= bottomBound + offset)
         {
             Die();
         }
-        transform.position = transform.position + new Vector3(0, -1 * moveSpeed * Time.deltaTime, 0);
+        transform.position = transform.position + new Vector3(moveSpeedSide * Time.deltaTime * direction, -1 * moveSpeed * Time.deltaTime, 0);
     }
 }

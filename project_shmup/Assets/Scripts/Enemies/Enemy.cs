@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float health;
     public float moveSpeed;
+    public float moveSpeedSide;
     public Projectile bullet;
     //public GameObject deathEffect; // we can use this to make a death effect when he explodes
 
