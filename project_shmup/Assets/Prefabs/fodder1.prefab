@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8627830439487882583}
   - component: {fileID: 6995212163925832932}
   - component: {fileID: 671262542502162745}
-  - component: {fileID: 3464718905043833020}
+  - component: {fileID: 5609964187031677963}
   m_Layer: 0
   m_Name: fodder1
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MonoBehaviour:
   moveSpeed: 4
   bullet: {fileID: 0}
   direction: 1
---- !u!61 &3464718905043833020
+--- !u!61 &5609964187031677963
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02771163, y: 0.027692556}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -123,5 +123,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.9445767, y: 1.8338428}
   m_EdgeRadius: 0
