@@ -7,13 +7,20 @@ public class playerWeapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject playerBullet;
+    public float fireRate = 0.1f;
+    public float timeSinceLastShot = 0.1f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        timeSinceLastShot += Time.deltaTime;
+        if (timeSinceLastShot > fireRate)
         {
-            Shoot();
+            if(Input.GetButton("Fire1"))
+            {
+                Shoot();
+                timeSinceLastShot = 0;
+            }
         }
     }
 
