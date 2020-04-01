@@ -8,12 +8,17 @@ public class PlayerMovement : MonoBehaviour
     Vector3 move; // directional vector
     bool holdingTwoHori = false; // checks if the player is holding both horizontal directions
     bool holdingTwoVert = false; // ^ for vertical
+    public GameObject shipFocus;
+    public float leftBound;
+    public float rightBound;
+    public float topBound;
+    public float bottomBound;
     
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
     void Start()
     {
-        
+        shipFocus.SetActive(false);
     }
 
     // Update is called once per frame
@@ -89,7 +94,11 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            move = move * 0.5f;
+            move = move * 0.47f;
+            shipFocus.SetActive(true);
+        } else
+        {
+            shipFocus.SetActive(false);
         }
         // player movement calculations end here ////////////////////////////////////////////////////////
     }
@@ -100,21 +109,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 increment = move * speed * Time.deltaTime;
         Vector3 after = transform.position + increment;
         // player object bounds  ////////////////////////////////////////////////////////
-        if (after.x < -13)
+        if (after.x < leftBound)
         {
-            increment.x -= after.x+13;
+            increment.x -= after.x - leftBound;
         }
-        if (after.x > 13)
+        if (after.x > rightBound)
         {
-            increment.x -= after.x-13;
+            increment.x -= after.x - rightBound;
         }
-        if (after.y < -9)
+        if (after.y < bottomBound)
         {
-            increment.y -= after.y+9;
+            increment.y -= after.y - bottomBound;
         }
-        if (after.y > 9)
+        if (after.y > topBound)
         {
-            increment.y -= after.y-9;
+            increment.y -= after.y - topBound;
         }
         transform.position += increment;
     }
