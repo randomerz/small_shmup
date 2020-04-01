@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float rightBound;
     public float topBound;
     public float bottomBound;
+    public float focusModifier;
     
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
+            
             rightPressed = true;
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -94,7 +96,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            move = move * 0.47f;
+            print(holdingTwoHori);
+            move = move * focusModifier;
             shipFocus.SetActive(true);
         } else
         {

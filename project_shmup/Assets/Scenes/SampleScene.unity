@@ -187,6 +187,7 @@ MonoBehaviour:
   rightBound: 13
   topBound: 9
   bottomBound: -9
+  focusModifier: 0.44
 --- !u!212 &241552044
 SpriteRenderer:
   m_ObjectHideFlags: 0
