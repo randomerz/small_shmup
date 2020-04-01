@@ -87,6 +87,10 @@ public class PlayerMovement : MonoBehaviour
                 move.y = 1;
             }
         }
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            move = move * 0.5f;
+        }
         // player movement calculations end here ////////////////////////////////////////////////////////
     }
     
