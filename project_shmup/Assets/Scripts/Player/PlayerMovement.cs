@@ -96,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            print(holdingTwoHori);
             move = move * focusModifier;
             shipFocus.SetActive(true);
         } else
