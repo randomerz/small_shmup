@@ -250,5 +250,5 @@ MonoBehaviour:
   firePoint: {fileID: 4472182778379538282}
   playerBullet: {fileID: 5044447066210393863, guid: 16a084970778bca4ab656a213334e88c,
     type: 3}
-  fireRate: 0.1
+  fireRate: 0.5
   timeSinceLastShot: 3.143747
