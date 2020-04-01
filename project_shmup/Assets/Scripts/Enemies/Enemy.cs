@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         // Instantiate(deathEffect, transform.position, Quaternion.identity); // see above
         Destroy(gameObject); // remove the enemy when he die
