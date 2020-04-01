@@ -31,6 +31,10 @@ public class Enemy : MonoBehaviour
         // Instantiate(deathEffect, transform.position, Quaternion.identity); // see above
         Destroy(gameObject); // remove the enemy when he die
     }
+    public void Shoot (float time, bullet)
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
