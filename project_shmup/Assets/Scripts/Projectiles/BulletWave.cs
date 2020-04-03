@@ -10,13 +10,14 @@ public class BulletWave : MonoBehaviour
     {
         foreach (Projectile b in GetComponentsInChildren<Projectile>())
             bullets.Add(b.gameObject);
+        DestroySelf();
     }
 
     public void DestroySelf()
     {
         foreach (GameObject b in bullets)
         {
-            Destroy(b);
+            Destroy(b, 5f);
         }
         Destroy(gameObject);
     }
