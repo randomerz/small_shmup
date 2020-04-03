@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -1.01
-  enemyBullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
+  enemyBullet: {fileID: 7989574924593040465, guid: f66372363c251ff41897954be4bb65c6,
     type: 3}
   fireRate: 0.5
   timeSinceLastShot: 0
