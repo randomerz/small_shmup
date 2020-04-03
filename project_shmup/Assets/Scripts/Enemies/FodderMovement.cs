@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fodder : Enemy
-{
+public class FodderMovement : Enemy
+{ 
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
