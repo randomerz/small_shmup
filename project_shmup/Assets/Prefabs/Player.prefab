@@ -247,8 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d32475c29a49341ade650689346f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 4472182778379538282}
-  playerBullet: {fileID: 5044447066210393863, guid: 16a084970778bca4ab656a213334e88c,
-    type: 3}
-  fireRate: 0.5
-  timeSinceLastShot: 3.143747
+  firePoint: {fileID: 0}
+  playerBullet: {fileID: 0}
+  fireRate: 0.1
+  timeSinceLastShot: 0.1
