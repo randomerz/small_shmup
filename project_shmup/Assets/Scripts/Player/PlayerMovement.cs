@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            
             rightPressed = true;
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -52,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (leftPressed && rightPressed)
         {
-            if(holdingTwoHori)
+            if (holdingTwoHori)
             {
                 move.x = prev.x;
             } else
@@ -63,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         } else
         {
             holdingTwoHori = false;
-            if(leftPressed)
+            if (leftPressed)
             {
                 move.x = -1;
             }
@@ -94,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
                 move.y = 1;
             }
         }
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             move = move * focusModifier;
             shipFocus.SetActive(true);

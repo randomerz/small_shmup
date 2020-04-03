@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StraightB : Projectile
+public class StraightBullet : Projectile
 {
     // Start is called before the first frame update
     void Start()

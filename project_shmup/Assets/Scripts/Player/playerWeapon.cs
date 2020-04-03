@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerWeapon : MonoBehaviour
+public class PlayerWeapon : MonoBehaviour
 {
 
     public Transform firePoint;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerBullet : Projectile
+public class PlayerBullet : Projectile
 {
     public float damage;
     public Rigidbody2D rb;
