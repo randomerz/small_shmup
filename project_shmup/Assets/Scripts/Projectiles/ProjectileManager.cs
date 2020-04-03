@@ -5,53 +5,71 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    // ArrayList myList = new ArrayList();
-    ArrayList enemyActiveBullets;
-    ArrayList enemyInactiveBullets;
-    ArrayList playerActiveBullets;
-    ArrayList playerInactiveBullets;
-    // Start is called before the first frame update
+    // ArrayStack myStack = new ArrayStack();
+    List<Projectile> enemyActiveBullets = new List<Projectile>();
+    List<PlayerBullet> playerActiveBullets = new List<PlayerBullet>();
+
+    Stack<Projectile> enemyInactiveBullets = new Stack<Projectile>();
+    Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
+
+    public GameObject playerBullet;
+    public GameObject genericBullet;
+
     void Start()
     {
-        activeBullets = new ArrayList();
-        inactiveBullets = new ArrayList();
+
     }
 
-    Projectile makeEnemyBullet()
+    public Projectile MakeEnemyBullet()
     {
         Projectile bullet;
-        // Take a bullet out of the inactive pool
+        // if already has bullet, remove from there
         if (enemyInactiveBullets.Count > 0)
         {
-            bullet = enemyInactiveBullets.Remove();
+            bullet = enemyInactiveBullets.Pop();
+            bullet.gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject bulletGameObj = Instantiate(genericBullet);
+            bullet = bulletGameObj.GetComponent<Projectile>();
         }
 
-        Instantiate(bullet);
         enemyActiveBullets.Add(bullet);
         return bullet;
     }
-    playerBullet makeBullet()
+
+    public PlayerBullet MakePlayerBullet()
     {
-        playerBullet bullet;
-        // Take a bullet out of the inactive pool
+        PlayerBullet bullet;
+
         if (playerInactiveBullets.Count > 0)
         {
-            return playerInactiveBullets.Remove();
-
+            bullet = playerInactiveBullets.Pop();
+            bullet.gameObject.SetActive(true);
         }
-        Instantiate(bullet);
+        else
+        {
+            GameObject bulletGameObj = Instantiate(playerBullet);
+            bullet = bulletGameObj.GetComponent<PlayerBullet>();
+        }
+
         playerActiveBullets.Add(bullet);
         return bullet;
     }
-    void enemySetInactive(Projectile bullet)
+
+    public void SetInactiveEnemy(Projectile bullet)
     {
-        enemyActiveBullets.RemoveAt(enemyActiveBullets.IndexOf(bullet));
-        enemyInactiveBullets.Add(bullet);
+        enemyActiveBullets.Remove(bullet);
+        enemyInactiveBullets.Push(bullet);
+        bullet.gameObject.SetActive(false);
     }
-    void playerSetInactive(playerBullet bullet)
+
+    public void SetInactivePlayer(PlayerBullet bullet)
     {
-        playerActiveBullets.RemoveAt(playerActiveBullets.IndexOf(bullet));
-        playerInactiveBullets.Add(bullet);
+        playerActiveBullets.Remove(bullet);
+        playerInactiveBullets.Push(bullet);
+        bullet.gameObject.SetActive(false);
     }
 
     void FixedUpdate()
