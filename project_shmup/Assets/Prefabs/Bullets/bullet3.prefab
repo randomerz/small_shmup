@@ -101,6 +101,6 @@ MonoBehaviour:
   rightBound: 16
   leftBound: -16
   bottomBound: -9
-  circleSpeed: 2
+  circleSpeed: 0.8
   circleSize: 1
-  circleGrowSpeed: 0.07
+  circleGrowSpeed: 0.02
