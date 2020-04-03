@@ -103,4 +103,4 @@ MonoBehaviour:
   bottomBound: -9
   circleSpeed: 2
   circleSize: 1
-  circleGrowSpeed: 0.05
+  circleGrowSpeed: 0.07
