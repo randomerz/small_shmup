@@ -16,9 +16,9 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void TakeDamage (float damage)
+    public void TakeDamage()
     {
-        health -= damage; // subtract damage from health points
+        health -= 1; // subtract damage from health points
 
         if (health <= 0) // if the enemy runs out of health
         {

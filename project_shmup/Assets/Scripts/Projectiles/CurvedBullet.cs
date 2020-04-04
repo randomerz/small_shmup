@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CurvedBullet : Projectile
 {
-    // Start is called before the first frame update
     public float topBound;
     public float rightBound;
     public float leftBound;
@@ -13,19 +12,27 @@ public class CurvedBullet : Projectile
     public float circleSize = 0;
     public float circleGrowSpeed = 0.1f;
     Vector3 move;
+    float iteration;
+    float frames = 2400;
+    
     
     void Start()
     {
-        
+        iteration = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //// big brain polar coordinate vector calculations for curvature //////////////
         move = Vector3.zero;
-        move.x = Mathf.Sin(Time.time * circleSpeed) * circleSize;
-        move.y = Mathf.Cos(Time.time * circleSpeed) * circleSize;
+        move.x = Mathf.Sin(iteration * circleSpeed) * circleSize;
+        move.y = -1 * Mathf.Cos(iteration * circleSpeed) * circleSize;
         circleSize += circleGrowSpeed;
+        iteration += 6.283f / frames;
+        if (iteration >= 6.283)
+        {
+            iteration = 0;
+        }
     }
     
     void FixedUpdate()
