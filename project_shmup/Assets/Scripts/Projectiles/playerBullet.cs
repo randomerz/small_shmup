@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerBullet : Projectile
 {
-    public float damage;
     public Rigidbody2D rb;
 
     //public GameObject impactEffect; // if we want an impact effect
