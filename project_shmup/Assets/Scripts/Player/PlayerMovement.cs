@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public float bottomBound;
     public float focusModifier;
     public float lives;
-    
+    public Text HPDisplay;
+
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
     void Start()
     {
+        displayHP(lives);
         shipFocus.SetActive(false);
     }
 
@@ -135,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
         if(lives >= 1)
         {
             lives -= 1;
+            displayHP(lives); // change the hp on the screen
             Debug.Log("Life lost.");
             // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
             if (lives == 0)
@@ -143,6 +147,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+    }
+
+    public void displayHP(float hp) // updates hp display 
+    {
+        HPDisplay.text = "HP: " + hp.ToString(); 
     }
 
     void Die()
