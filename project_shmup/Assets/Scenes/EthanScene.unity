@@ -220,9 +220,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.463
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &448954873
 Transform:
   m_ObjectHideFlags: 0
