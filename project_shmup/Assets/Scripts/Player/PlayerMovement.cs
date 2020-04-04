@@ -128,4 +128,10 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.position += increment;
     }
+
+    public void Die()
+    {
+        // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
+        Debug.Log("You died.");
+    }
 }
