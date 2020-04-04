@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6202655296964540723}
   - component: {fileID: 7673376331668512826}
   m_Layer: 0
-  m_Name: wavytrianglegreen
-  m_TagString: Untagged
+  m_Name: WavyTriangleGreen
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

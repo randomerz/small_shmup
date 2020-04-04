@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float topBound;
     public float bottomBound;
     public float focusModifier;
+    public float lives;
     
     // Controls: arrows for normal movement
     // Z and X for bomb and shoot
@@ -129,9 +130,25 @@ public class PlayerMovement : MonoBehaviour
         transform.position += increment;
     }
 
-    public void Die()
+    public void TakeLife()
     {
-        // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
+        if(lives >= 1)
+        {
+            lives -= 1;
+            Debug.Log("Life lost.");
+            // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
+            if (lives == 0)
+            {
+                Die();
+            }
+        }
+        
+    }
+
+    void Die()
+    {
+        //pull a game over//
         Debug.Log("You died.");
+        
     }
 }

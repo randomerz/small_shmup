@@ -14,8 +14,9 @@ public class CurvedBullet : Projectile
     Vector3 move;
     float iteration;
     float frames = 2400;
-    
-    
+    public Rigidbody rb;
+
+
     void Start()
     {
         iteration = 0;
@@ -45,5 +46,18 @@ public class CurvedBullet : Projectile
             Destroy(transform.gameObject);
         }
         transform.position += move * Time.deltaTime;
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            PlayerMovement player = collision.GetComponent<PlayerMovement>();
+            if (player != null)
+                player.TakeLife();
+            Destroy(gameObject);
+        }
+
     }
 }

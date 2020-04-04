@@ -10,6 +10,7 @@ public class StraightBullet : Projectile
     public float rightBound = 16;
     public float leftBound = -16;
     public float bottomBound = -9;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,19 @@ public class StraightBullet : Projectile
         {
             Destroy(transform.gameObject);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        
+        if(collision.gameObject.tag.Equals("Player"))
+        {
+            PlayerMovement player = collision.GetComponent<PlayerMovement>();
+            if (player != null)
+                player.TakeLife();
+            Destroy(gameObject);
+        }
+        
     }
 }

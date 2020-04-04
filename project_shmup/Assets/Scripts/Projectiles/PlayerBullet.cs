@@ -26,14 +26,21 @@ public class PlayerBullet : Projectile
 
     void OnTriggerEnter2D(Collider2D hitInfo) // when the bullet collides with an enemy/object
     {
-        Enemy enemy = hitInfo.GetComponent<Enemy>(); // stores the collidee as an enemy
-        if (enemy != null) // if it actually collides with an enemy
-        { // enemy takes damage
-            enemy.TakeDamage();
+        
+        if (hitInfo.gameObject.tag.Equals("Enemy"))
+        {
+            Enemy enemy = hitInfo.GetComponent<Enemy>(); // stores the collidee as an enemy
+            if (enemy != null) // if it actually collides with an enemy
+            { // enemy takes damage
+                enemy.TakeDamage();
+            }
+
+            //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
+
+            Destroy(gameObject); // deletes bullet
         }
-
-        //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
-
-        Destroy(gameObject); // deletes bullet
+            
+        
+        
     }
 }
