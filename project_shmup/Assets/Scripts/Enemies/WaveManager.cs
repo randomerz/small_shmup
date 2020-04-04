@@ -32,7 +32,7 @@ public class WaveTest : MonoBehaviour
 
     void SpawnWave()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < enemyAmount; i++)
         {
             Vector3 spawnPos = transform.position + new Vector3(enemySeparation * i, 0);
             // spawns fodder in spawnpos as a child of gameobject enemyContainer
