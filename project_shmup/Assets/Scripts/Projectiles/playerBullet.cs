@@ -1,10 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBullet : Projectile
 {
-    public float damage;
     public Rigidbody2D rb;
 
     //public GameObject impactEffect; // if we want an impact effect
@@ -29,8 +28,8 @@ public class PlayerBullet : Projectile
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>(); // stores the collidee as an enemy
         if (enemy != null) // if it actually collides with an enemy
-        {
-            enemy.TakeDamage(damage); // enemy takes damage
+        { // enemy takes damage
+            enemy.TakeDamage();
         }
 
         //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
