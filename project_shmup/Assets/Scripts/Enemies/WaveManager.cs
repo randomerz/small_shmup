@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveTest : MonoBehaviour
+public class WaveManager : MonoBehaviour
 {
     public float spawnRate = 0.3f;
     public float timeSinceWave;
