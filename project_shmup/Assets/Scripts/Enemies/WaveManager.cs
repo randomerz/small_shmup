@@ -9,7 +9,7 @@ public class WaveManager : MonoBehaviour
     public float enemyAmount = 5;
     public float enemySeparation = 2.5f;
 
-    public GameObject fodder1;
+    public GameObject enemyPrefab;
 
     public GameObject enemyContainer;
 
@@ -36,7 +36,7 @@ public class WaveManager : MonoBehaviour
         {
             Vector3 spawnPos = transform.position + new Vector3(enemySeparation * i, 0);
             // spawns fodder in spawnpos as a child of gameobject enemyContainer
-            Instantiate(fodder1, spawnPos, transform.rotation, enemyContainer.transform);
+            Instantiate(enemyContainer, spawnPos, transform.rotation, enemyContainer.transform);
         }
     }
 }
