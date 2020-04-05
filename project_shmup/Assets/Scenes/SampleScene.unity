@@ -188,6 +188,8 @@ MonoBehaviour:
   topBound: 9
   bottomBound: -9
   focusModifier: 0.44
+  lives: 0
+  HPDisplay: {fileID: 0}
 --- !u!212 &241552044
 SpriteRenderer:
   m_ObjectHideFlags: 0
