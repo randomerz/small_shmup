@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Z and X for bomb and shoot
     void Start()
     {
-        displayHP(lives);
+        DisplayHP(lives);
         shipFocus.SetActive(false);
     }
 
@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         if(lives >= 1)
         {
             lives -= 1;
-            displayHP(lives); // change the hp on the screen
+            DisplayHP(lives); // change the hp on the screen
             Debug.Log("Life lost.");
             // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
             if (lives == 0)
@@ -149,9 +149,14 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    public void displayHP(float hp) // updates hp display 
+    public void DisplayHP(float hp) // updates hp display 
     {
-        HPDisplay.text = "HP: " + hp.ToString(); 
+        if (HPDisplay != null)
+        {
+            HPDisplay.text = "HP: " + hp.ToString();
+        }
+        else
+            Debug.Log("HP: " + hp);
     }
 
     void Die()
