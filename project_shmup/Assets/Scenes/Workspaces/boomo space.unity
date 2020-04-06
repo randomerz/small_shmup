@@ -205,13 +205,13 @@ PrefabInstance:
     - target: {fileID: 3692219748952785032, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
       propertyPath: fireRate
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3692219748952785032, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
       propertyPath: enemyBullet
       value: 
-      objectReference: {fileID: 7920164381596074700, guid: 7b68cfde907e4fc489dc9fdbdbe9cc7a,
+      objectReference: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
         type: 3}
     - target: {fileID: 8627830439487882583, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
@@ -381,7 +381,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1084413777
@@ -544,7 +544,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1769164841
@@ -626,7 +626,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1807972091
@@ -792,7 +792,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2047803475

@@ -133,6 +133,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: fodder1
       objectReference: {fileID: 0}
+    - target: {fileID: 3692219748952785032, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: enemyBullet
+      value: 
+      objectReference: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
+        type: 3}
     - target: {fileID: 8627830439487882583, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,7 +194,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3692219748952785032, guid: e8a60047446a82c4bb92a4b1e299a812, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8a60047446a82c4bb92a4b1e299a812, type: 3}
 --- !u!1 &33708425 stripped
 GameObject:
@@ -412,7 +419,7 @@ RectTransform:
   - {fileID: 684219622}
   - {fileID: 338507583}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -732,6 +739,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1214838566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1801286221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 809706068735900547, guid: e8a60047446a82c4bb92a4b1e299a812,
+    type: 3}
+  m_PrefabInstance: {fileID: 10022940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1801286222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801286221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bab51a4b6cefe45b92ea09ec9f3873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1.01
+  enemyBullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
+    type: 3}
+  fireRate: 0.5
+  timeSinceLastShot: 0
 --- !u!1 &1803004759
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,5 +899,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

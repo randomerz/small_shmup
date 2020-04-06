@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHearts >= 1)
         {
             currentHearts -= 1;
-            displayHP(); // change the hp on the screen
+            DisplayHP(); // change the hp on the screen
             Debug.Log("Life lost.");
             // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
             if (currentHearts <= 0)
