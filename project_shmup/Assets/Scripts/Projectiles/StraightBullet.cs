@@ -34,7 +34,7 @@ public class StraightBullet : Projectile
         
         if(collision.gameObject.tag.Equals("Player"))
         {
-            PlayerMovement player = collision.GetComponent<PlayerMovement>();
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
             if (player != null)
                 player.TakeLife();
             Destroy(gameObject);
