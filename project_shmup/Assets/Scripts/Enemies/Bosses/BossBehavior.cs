@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using UnityEngine;
 
-public class Boss_Behavior : MonoBehaviour
+public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing

@@ -164,10 +164,9 @@ MonoBehaviour:
   rightBound: 13
   topBound: 9
   bottomBound: -9
-  timeSinceTurn: 0
-  turnRate: 1
   offset: -1
   direction: 1
+  timeSinceTurn: 0
 --- !u!1001 &175214479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,10 +362,11 @@ MonoBehaviour:
   leftBound: -13
   rightBound: 13
   topBound: 9
-  bottomBound: -9
+  bottomBound: 0
   shift: 2
   cycle: 0
   player: {fileID: 175214480}
+  bullet: {fileID: 0}
 --- !u!1001 &730572911
 PrefabInstance:
   m_ObjectHideFlags: 0
