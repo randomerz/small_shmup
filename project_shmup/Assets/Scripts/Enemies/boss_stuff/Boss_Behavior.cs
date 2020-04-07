@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -15,8 +12,9 @@ public class Boss_Behavior : MonoBehaviour
     public float bottomBound = -9;
     public float shift = 2.0f;
     public float cycle;
-    public Vector3[] l;
-    public bool b;
+    private Vector3[] l;
+    private bool b;
+    public GameObject player;
     private System.Random rand;
 
     void Start()
@@ -27,6 +25,9 @@ public class Boss_Behavior : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Phase 1 slower teleportation with targeted shots
+    //Phase 2 fast teleportation with missiles
+    //Phase 3 Beam of death
     void Update()
     {
         cycle += Time.deltaTime;
@@ -38,6 +39,7 @@ public class Boss_Behavior : MonoBehaviour
                 b = GeneratePos();
             }
             cycle = 0;
+            transform.Rotate(0f, 0f, FindAngle());
         }
     }
 
@@ -73,5 +75,11 @@ public class Boss_Behavior : MonoBehaviour
             ts[i] = ts[r];
             ts[r] = tmp;
         }
+    }
+    public float FindAngle()
+    {
+        var e = -(float)Math.Atan((transform.position.x - player.transform.position.x) / (transform.position.y - player.transform.position.y));
+        UnityEngine.Debug.Log(e);
+        return e;
     }
 }

@@ -366,8 +366,7 @@ MonoBehaviour:
   bottomBound: -9
   shift: 2
   cycle: 0
-  l: []
-  b: 0
+  player: {fileID: 175214480}
 --- !u!1001 &730572911
 PrefabInstance:
   m_ObjectHideFlags: 0
