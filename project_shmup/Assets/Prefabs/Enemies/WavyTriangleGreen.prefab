@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1820576040670809666}
   - component: {fileID: 6000216801137770640}
   - component: {fileID: 6449892248330005759}
-  - component: {fileID: 6202655296964540723}
   - component: {fileID: 7673376331668512826}
+  - component: {fileID: 3085736759600875}
   m_Layer: 0
   m_Name: WavyTriangleGreen
   m_TagString: Enemy
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9138963649559496473, guid: 23d2859b9f0bb714e81a1c5d37ac4895,
+  m_Sprite: {fileID: -9138963649559496473, guid: c725196bba96f48409541acd5204372b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,27 +105,9 @@ MonoBehaviour:
   rightBound: 13
   topBound: 9
   bottomBound: -9
-  timeSinceTurn: 0
-  turnRate: 1
   offset: -1
   direction: 1
---- !u!114 &6202655296964540723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3216736973506063280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505ba9ee0dd70b94384da3f4f8e18d79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -1.01
-  enemyBullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
-    type: 3}
-  fireRate: 0.5
-  timeSinceLastShot: 0
+  timeSinceTurn: 0
 --- !u!61 &7673376331668512826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +134,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &3085736759600875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216736973506063280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bab51a4b6cefe45b92ea09ec9f3873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1.01
+  enemyBullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
+    type: 3}
+  fireRate: 0.5
+  timeSinceLastShot: 0
