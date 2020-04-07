@@ -10,7 +10,7 @@ public class ProjectileManager : MonoBehaviour
     List<PlayerBullet> playerActiveBullets = new List<PlayerBullet>();
 
     Stack<Projectile> enemyInactiveBullets = new Stack<Projectile>();
-    Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
+    public Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
 
     public GameObject playerBullet;
     public GameObject genericBullet;

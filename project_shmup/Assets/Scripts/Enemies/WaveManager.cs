@@ -11,8 +11,6 @@ public class WaveManager : MonoBehaviour
 
     public GameObject enemyPrefab;
 
-    public GameObject enemyContainer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +34,7 @@ public class WaveManager : MonoBehaviour
         {
             Vector3 spawnPos = transform.position + new Vector3(enemySeparation * i, 0);
             // spawns fodder in spawnpos as a child of gameobject enemyContainer
-            Instantiate(enemyContainer, spawnPos, transform.rotation, enemyContainer.transform);
+            Instantiate(enemyPrefab, spawnPos, transform.rotation, enemyPrefab.transform);
         }
     }
 }

@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Camera",
     "\\Enemies",
     "\\Player",
     "\\Projectiles"
   ],
-  "SelectedNode": "\\Projectiles\\StraightBullet.cs",
+  "SelectedNode": "\\Camera\\scroller.cs",
   "PreviewInSolutionExplorer": false
 }
