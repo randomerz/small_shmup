@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
     public ProjectileManager projManager;
     public bool deleteIfOutOfBounds = true;
-    public float leftBound = 5.0625f;
+    public float leftBound = -5.0625f;
     public float rightBound = 5.0625f;
     public float topBound = 9;
     public float bottomBound = -9;
