@@ -98,7 +98,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   path: 
-  rb: {fileID: -864439836809369600}
+  projManager: {fileID: 0}
+  deleteIfOutOfBounds: 1
+  leftBound: -5.0625
+  rightBound: 5.0625
+  topBound: 9
+  bottomBound: -9
+  boundsOffset: 2
 --- !u!50 &-864439836809369600
 Rigidbody2D:
   serializedVersion: 4

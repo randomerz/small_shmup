@@ -4,29 +4,21 @@ using UnityEngine;
 
 public class PlayerBullet : Projectile
 {
-    public Rigidbody2D rb;
 
-    //public GameObject impactEffect; // if we want an impact effect
-
-    // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * speed; // makes the bullet move
+        //rb.velocity = transform.up * speed; // makes the bullet move
     }
 
-    void Update()
+    
+    void FixedUpdate()
     {
-
-    }
-
-    void OnBecameInvisible() // when the bullet leaves the camera view
-    {
-        Destroy(gameObject); // delete bullet to free memory space
+        CheckBounds();
+        transform.position += transform.up * speed * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) // when the bullet collides with an enemy/object
     {
-        
         if (hitInfo.gameObject.tag.Equals("Enemy"))
         {
             Enemy enemy = hitInfo.GetComponent<Enemy>(); // stores the collidee as an enemy
@@ -39,8 +31,16 @@ public class PlayerBullet : Projectile
 
             Destroy(gameObject); // deletes bullet
         }
-            
-        
-        
+    }
+
+    public new void CheckBounds()
+    {
+        if (deleteIfOutOfBounds && (transform.position.x > rightBound + boundsOffset || transform.position.x < leftBound - boundsOffset || transform.position.y > topBound + boundsOffset || transform.position.y < bottomBound - boundsOffset))
+        {
+            if (projManager != null)
+                projManager.RemovePlayerBullet(this);
+            else
+                Destroy(gameObject);
+        }
     }
 }

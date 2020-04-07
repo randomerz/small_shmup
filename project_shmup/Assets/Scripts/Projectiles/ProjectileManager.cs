@@ -20,7 +20,7 @@ public class ProjectileManager : MonoBehaviour
 
     }
 
-    public Projectile MakeEnemyBullet()
+    public Projectile CreateEnemyBullet()
     {
         Projectile bullet;
         // if already has bullet, remove from there
@@ -39,7 +39,7 @@ public class ProjectileManager : MonoBehaviour
         return bullet;
     }
 
-    public PlayerBullet MakePlayerBullet()
+    public PlayerBullet CreatePlayerBullet()
     {
         PlayerBullet bullet;
 
@@ -58,14 +58,14 @@ public class ProjectileManager : MonoBehaviour
         return bullet;
     }
 
-    public void SetInactiveEnemy(Projectile bullet)
+    public void RemoveEnemyBullet(Projectile bullet)
     {
         enemyActiveBullets.Remove(bullet);
         enemyInactiveBullets.Push(bullet);
         bullet.gameObject.SetActive(false);
     }
 
-    public void SetInactivePlayer(PlayerBullet bullet)
+    public void RemovePlayerBullet(PlayerBullet bullet)
     {
         playerActiveBullets.Remove(bullet);
         playerInactiveBullets.Push(bullet);
