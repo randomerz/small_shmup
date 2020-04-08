@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5411676304584672947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3281696dd5347ec91ab7842d2de95d, type: 3}
+  m_Script: {fileID: 11500000, guid: d7f351c1e2dc07649b39863a2f7c6ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
@@ -102,9 +102,10 @@ MonoBehaviour:
   rightBound: 16
   leftBound: -16
   bottomBound: -9
-  circleSpeed: 0.8
-  circleSize: 1
+  circleSpeed: 1
+  circleSize: 0
   circleGrowSpeed: 0.02
+  rb: {fileID: 0}
 --- !u!58 &-6487193470476333999
 CircleCollider2D:
   m_ObjectHideFlags: 0

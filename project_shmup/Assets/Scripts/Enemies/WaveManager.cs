@@ -4,37 +4,47 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    public float spawnRate = 0.3f;
-    public float timeSinceWave;
-    public float enemyAmount = 5;
-    public float enemySeparation = 2.5f;
+    public GameObject[] waves;
+    public int currentWave;
+    public bool infinite = false;
+    
 
-    public GameObject enemyPrefab;
-
-    // Start is called before the first frame update
     void Start()
     {
-        timeSinceWave = spawnRate;
+        SpawnNextWave();
+
+        // check
+        foreach (GameObject g in waves)
+        {
+            if (g.GetComponent<EnemyWave>() == null)
+                Debug.LogWarning("Game Object in WaveManager doesn't have an 'EnemyWave' component!");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeSinceWave += Time.deltaTime;
-        if (timeSinceWave > spawnRate)
+        
+    }
+
+    public void SpawnNextWave()
+    {
+        if (currentWave < waves.Length)
+            Instantiate(waves[currentWave++], new Vector3(0, 0, 0), Quaternion.identity, transform);
+        else
         {
-            SpawnWave();
-            timeSinceWave = 0;
+            if (infinite)
+            {
+                Instantiate(waves[0], transform);
+                currentWave = 1;
+            }
+            else
+                StageComplete();
         }
     }
 
-    void SpawnWave()
+    public void StageComplete()
     {
-        for (int i = 0; i < enemyAmount; i++)
-        {
-            Vector3 spawnPos = transform.position + new Vector3(enemySeparation * i, 0);
-            // spawns fodder in spawnpos as a child of gameobject enemyContainer
-            Instantiate(enemyPrefab, spawnPos, transform.rotation, enemyPrefab.transform);
-        }
+        Debug.Log("Stage Complete!");
     }
 }

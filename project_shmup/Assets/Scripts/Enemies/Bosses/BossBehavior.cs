@@ -1,24 +1,32 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss_Behavior : MonoBehaviour
+public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing
+    public GameObject player;
+    public GameObject bullet;
+    public GameObject beam;
+    public GameObject missile;
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
-    public float bottomBound = -9;
+    public float bottomBound;
     public float shift = 2.0f;
     public float cycle;
+
     private Vector3[] l;
     private bool b;
-    public GameObject player;
+    private Dictionary<GameObject, Vector3[]> firePoints;
+    private float prevRotate = 0;
     private System.Random rand;
 
     void Start()
     {
+        firePoints = new Dictionary<GameObject, Vector3[]>();
         cycle = 0;
         l = new Vector3[4];
         rand = new System.Random();
@@ -39,12 +47,22 @@ public class Boss_Behavior : MonoBehaviour
                 b = GeneratePos();
             }
             cycle = 0;
-            transform.Rotate(0f, 0f, FindAngle());
+            transform.Rotate(0f, 0f, -prevRotate+FindAngle());
+            Vector3[] a = { transform.position, transform.position + new Vector3(0, 1, 0) };
+            firePoints.Add(bullet, a);
+            Shoot(bullet);
+            firePoints.Remove(bullet);
         }
     }
-
+    public void Shoot(GameObject bull)
+    {
+        Vector3[] fireArr = firePoints[bull];
+        for (var i = 0; i < fireArr.Length; ++i)
+            Instantiate(bullet, fireArr[i], transform.rotation);
+    }
     public bool GeneratePos()
     {
+        bottomBound = player.transform.position.y;
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
         float vshift = (Math.Abs(topBound) + Math.Abs(bottomBound)) * (float)rand.NextDouble(); //vertical shift
         Array.Clear(l, 0, l.Length);
@@ -78,8 +96,12 @@ public class Boss_Behavior : MonoBehaviour
     }
     public float FindAngle()
     {
-        var e = -(float)Math.Atan((transform.position.x - player.transform.position.x) / (transform.position.y - player.transform.position.y));
+        var x = transform.position.x - player.transform.position.x;
+        var y = transform.position.y - player.transform.position.y;
+        var e = (180/Math.PI)*Math.Atan((transform.position.x - player.transform.position.x) / (transform.position.y - player.transform.position.y));
         UnityEngine.Debug.Log(e);
-        return e;
+        UnityEngine.Debug.Log(x/y);
+        prevRotate = -(float)e;
+        return prevRotate;
     }
 }

@@ -96,9 +96,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc61ae55c1e1144e977b2dce6c7aa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projManager: {fileID: 0}
+  leftBound: -16
+  rightBound: 16
+  topBound: 9
+  bottomBound: -9
+  boundsOffset: 2
+  deleteIfOutOfBounds: 1
   speed: 15
-  path: 
-  rb: {fileID: -864439836809369600}
 --- !u!50 &-864439836809369600
 Rigidbody2D:
   serializedVersion: 4
