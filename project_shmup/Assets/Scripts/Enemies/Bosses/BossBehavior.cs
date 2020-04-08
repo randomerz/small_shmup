@@ -1,26 +1,32 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing
+    public GameObject player;
+    public GameObject bullet;
+    public GameObject beam;
+    public GameObject missile;
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
     public float bottomBound;
     public float shift = 2.0f;
     public float cycle;
+
     private Vector3[] l;
     private bool b;
+    private Dictionary<GameObject, Vector3[]> firePoints;
     private float prevRotate = 0;
-    public GameObject player;
-    public GameObject bullet;
     private System.Random rand;
 
     void Start()
     {
+        firePoints = new Dictionary<GameObject, Vector3[]>();
         cycle = 0;
         l = new Vector3[4];
         rand = new System.Random();
@@ -42,11 +48,17 @@ public class BossBehavior : MonoBehaviour
             }
             cycle = 0;
             transform.Rotate(0f, 0f, -prevRotate+FindAngle());
+            Vector3[] a = { transform.position, transform.position + new Vector3(0, 1, 0) };
+            firePoints.Add(bullet, a);
+            Shoot(bullet);
+            firePoints.Remove(bullet);
         }
     }
-    public void Shoot()
+    public void Shoot(GameObject bull)
     {
-
+        Vector3[] fireArr = firePoints[bull];
+        for (var i = 0; i < fireArr.Length; ++i)
+            Instantiate(bullet, fireArr[i], transform.rotation);
     }
     public bool GeneratePos()
     {
