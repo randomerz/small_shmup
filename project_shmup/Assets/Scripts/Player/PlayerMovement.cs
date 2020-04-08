@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float speed = 12.0f; // player speed
-    Vector3 move; // directional vector
+    public float speed = 12.0f; // player speed
+    public Vector3 move; // directional vector
     bool holdingTwoHori = false; // checks if the player is holding both horizontal directions
     bool holdingTwoVert = false; // ^ for vertical
     public GameObject shipFocus;
