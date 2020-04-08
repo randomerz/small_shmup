@@ -117,8 +117,8 @@ MonoBehaviour:
   numBullets: 3
   spread: 30
   fireRate: 1.5
-  isAimedAtPlayerSimple: 1
-  isAimedAtPlayerPredictive: 0
+  isAimedAtPlayerSimple: 0
+  isAimedAtPlayerPredictive: 1
   playerMovement: {fileID: 0}
 --- !u!61 &3500746918400452473
 BoxCollider2D:

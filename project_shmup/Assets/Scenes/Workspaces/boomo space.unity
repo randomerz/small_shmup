@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
@@ -299,7 +299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1564712847
 GameObject:
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 6914265998750442707, guid: c6e01bbc6cb8c2f46a879ce88106ff9d, type: 3}
+  - {fileID: 2164979313510607099, guid: 776e5c72d66877b4a90c99eecdb84056, type: 3}
   - {fileID: 2164979313510607099, guid: 776e5c72d66877b4a90c99eecdb84056, type: 3}
   - {fileID: 3993921380581998113, guid: ac6b81b865abca54bbab19db4a7919b0, type: 3}
   currentWave: 0

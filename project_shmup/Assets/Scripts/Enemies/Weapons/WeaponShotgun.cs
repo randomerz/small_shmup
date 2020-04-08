@@ -56,9 +56,11 @@ public class WeaponShotgun : MonoBehaviour
             float playerSlope = 0;
             float x;
             float y;
-            
-            playerSlope = rot.y / rot.x * speed;
-            
+            if (rot.x != 0)
+            {
+                playerSlope = rot.y / rot.x * speed;
+            }
+            Debug.Log("Player Slope: " + playerSlope);
             //minimum difference in t1 and t2, will make sense after reading all the code
             float tempDiff = 100;
             if (rot.x > 0)
@@ -71,7 +73,7 @@ public class WeaponShotgun : MonoBehaviour
                     float distanceEnemy = Mathf.Sqrt(Mathf.Pow(y - transform.position.y, 2) + Mathf.Pow(x - transform.position.x, 2));
                     float distancePlayer = Mathf.Sqrt(Mathf.Pow(y - playerPos.y, 2) + Mathf.Pow(x - playerPos.x, 2));
                     float timeEnemy = distanceEnemy / bullet.GetComponent<Projectile>().speed;
-                    float timePlayer = distancePlayer / bullet.GetComponent<Projectile>().speed;
+                    float timePlayer = distancePlayer / speed;
                     if (Mathf.Abs(timeEnemy - timePlayer) < tempDiff)
                     {
                         tempDiff = Mathf.Abs(timeEnemy - timePlayer);
@@ -90,7 +92,7 @@ public class WeaponShotgun : MonoBehaviour
                     float distanceEnemy = Mathf.Sqrt(Mathf.Pow(y - transform.position.y, 2) + Mathf.Pow(x - transform.position.x, 2));
                     float distancePlayer = Mathf.Sqrt(Mathf.Pow(y - playerPos.y, 2) + Mathf.Pow(x - playerPos.x, 2));
                     float timeEnemy = distanceEnemy / bullet.GetComponent<Projectile>().speed;
-                    float timePlayer = distancePlayer / bullet.GetComponent<Projectile>().speed;
+                    float timePlayer = distancePlayer / speed;
                     if (Mathf.Abs(timeEnemy - timePlayer) < tempDiff)
                     {
                         tempDiff = Mathf.Abs(timeEnemy - timePlayer);
@@ -100,6 +102,7 @@ public class WeaponShotgun : MonoBehaviour
                 baseAngle = tempAngle;
             }
             baseAngle -= 90;
+            Debug.Log("Base Angle: " + baseAngle);
         }
         else if (isAimedAtPlayerSimple)
         {
