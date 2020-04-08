@@ -12,15 +12,12 @@ public class ProjectileManager : MonoBehaviour
     Stack<Projectile> enemyInactiveBullets = new Stack<Projectile>();
     public Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
 
-    public GameObject playerBullet;
-    public GameObject genericBullet;
-
     void Start()
     {
 
     }
 
-    public Projectile CreateEnemyBullet()
+    public Projectile CreateEnemyBullet(GameObject prefab)
     {
         Projectile bullet;
         // if already has bullet, remove from there
@@ -31,15 +28,18 @@ public class ProjectileManager : MonoBehaviour
         }
         else
         {
-            GameObject bulletGameObj = Instantiate(genericBullet);
+            GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<Projectile>();
         }
 
         enemyActiveBullets.Add(bullet);
+
+        Projectile prefabBullet = prefab.GetComponent<Projectile>();
+        bullet.speed = prefabBullet.speed;
         return bullet;
     }
 
-    public PlayerBullet CreatePlayerBullet()
+    public PlayerBullet CreatePlayerBullet(GameObject prefab)
     {
         PlayerBullet bullet;
 
@@ -50,7 +50,7 @@ public class ProjectileManager : MonoBehaviour
         }
         else
         {
-            GameObject bulletGameObj = Instantiate(playerBullet);
+            GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<PlayerBullet>();
         }
 

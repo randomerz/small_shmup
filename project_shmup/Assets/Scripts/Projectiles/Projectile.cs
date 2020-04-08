@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
-    public string path;
-
     public ProjectileManager projManager;
-    public bool deleteIfOutOfBounds = true;
     public float leftBound = -5.0625f;
     public float rightBound = 5.0625f;
     public float topBound = 9;
     public float bottomBound = -9;
     public float boundsOffset = 2;
+    public bool deleteIfOutOfBounds = true;
+
+    public float speed;
 
     //public GameObject impactEffect; // if we want an impact effect
 

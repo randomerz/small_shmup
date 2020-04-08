@@ -9,8 +9,8 @@ public class DecelerateToZero : Projectile
 
     // requires distToTravel and timeToTake to be filled
     public bool useDistance = true;
-    public float timeToTake;
     public float distToTravel;
+    public float timeToTake;
 
     private float timeTaken = 0f;
     
