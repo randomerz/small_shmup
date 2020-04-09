@@ -230,6 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f0d85037f30034aafb2ba058284a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 12
+  move: {x: 0, y: 0, z: 0}
   shipFocus: {fileID: 4472182777617593489}
   leftBound: -13
   rightBound: 13
@@ -251,7 +253,7 @@ MonoBehaviour:
   firePoint: {fileID: 4472182778426144778}
   playerBullet: {fileID: 5044447066210393863, guid: 16a084970778bca4ab656a213334e88c,
     type: 3}
-  fireRate: 0.1
+  fireRate: 0.05
   timeSinceLastShot: 0.1
 --- !u!61 &2250968397489643859
 BoxCollider2D:
