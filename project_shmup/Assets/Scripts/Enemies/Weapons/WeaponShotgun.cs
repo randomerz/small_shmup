@@ -48,61 +48,34 @@ public class WeaponShotgun : MonoBehaviour
             Vector3 playerPos = playerMovement.transform.position;
             float speed = playerMovement.speed;
             Vector3 rot = playerMovement.move;
+            float tempAngle;
             //find angle between enemy and player
             Vector3 diff = playerPos - transform.position;
-            float angle = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-
-            float tempAngle = 0;
-            float playerSlope = 0;
-            float x;
-            float y;
-            if (rot.x != 0)
+            //angle in radians
+            float angle = Mathf.Atan2(diff.y, diff.x);
+            float playerAngle = Mathf.Atan2(rot.y, rot.x);
+  
+            float playerX = Mathf.Cos(playerAngle) * speed;
+            float playerY = Mathf.Sin(playerAngle) * speed;
+            
+            float bulletX = playerX;
+            if (rot.x == 0 && rot.y == 0)
             {
-                playerSlope = rot.y / rot.x * speed;
+                bulletX = 0;
             }
-            Debug.Log("Player Slope: " + playerSlope);
-            //minimum difference in t1 and t2, will make sense after reading all the code
-            float tempDiff = 100;
-            if (rot.x > 0)
+            float bulletY = -1 * Mathf.Sqrt(Mathf.Pow(bullet.GetComponent<Projectile>().speed, 2) + Mathf.Pow(bulletX, 2));
+            tempAngle = Mathf.Atan2(bulletY, bulletX);
+            Debug.Log(Mathf.Rad2Deg * angle);
+            if ((angle * Mathf.Rad2Deg) < -90)
             {
-                for (int a = (int)angle + 1; a < 361; a++)
-                {
-                    float bulletSlope = Mathf.Tan(a) * bullet.GetComponent<Projectile>().speed;
-                    x = (bulletSlope * transform.position.x - transform.position.y - playerSlope * playerPos.x + playerPos.y) / (bulletSlope - playerSlope);
-                    y = bulletSlope * (x - transform.position.x) + transform.position.y;
-                    float distanceEnemy = Mathf.Sqrt(Mathf.Pow(y - transform.position.y, 2) + Mathf.Pow(x - transform.position.x, 2));
-                    float distancePlayer = Mathf.Sqrt(Mathf.Pow(y - playerPos.y, 2) + Mathf.Pow(x - playerPos.x, 2));
-                    float timeEnemy = distanceEnemy / bullet.GetComponent<Projectile>().speed;
-                    float timePlayer = distancePlayer / speed;
-                    if (Mathf.Abs(timeEnemy - timePlayer) < tempDiff)
-                    {
-                        tempDiff = Mathf.Abs(timeEnemy - timePlayer);
-                        tempAngle = a;
-                    }
-                }
-                baseAngle = tempAngle;
+                baseAngle = tempAngle * Mathf.Rad2Deg + ((angle * Mathf.Rad2Deg) % 90);
             }
             else
             {
-                for (int a = 180; a < (int)angle; a++)
-                {
-                    float bulletSlope = Mathf.Tan(a) * bullet.GetComponent<Projectile>().speed;
-                    x = (bulletSlope * transform.position.x - transform.position.y - playerSlope * playerPos.x + playerPos.y) / (bulletSlope - playerSlope);
-                    y = bulletSlope * (x - transform.position.x) + transform.position.y;
-                    float distanceEnemy = Mathf.Sqrt(Mathf.Pow(y - transform.position.y, 2) + Mathf.Pow(x - transform.position.x, 2));
-                    float distancePlayer = Mathf.Sqrt(Mathf.Pow(y - playerPos.y, 2) + Mathf.Pow(x - playerPos.x, 2));
-                    float timeEnemy = distanceEnemy / bullet.GetComponent<Projectile>().speed;
-                    float timePlayer = distancePlayer / speed;
-                    if (Mathf.Abs(timeEnemy - timePlayer) < tempDiff)
-                    {
-                        tempDiff = Mathf.Abs(timeEnemy - timePlayer);
-                        tempAngle = a;
-                    }
-                }
-                baseAngle = tempAngle;
+                baseAngle = tempAngle * Mathf.Rad2Deg + ((angle * Mathf.Rad2Deg) + 90);
             }
+
             baseAngle -= 90;
-            Debug.Log("Base Angle: " + baseAngle);
         }
         else if (isAimedAtPlayerSimple)
         {
