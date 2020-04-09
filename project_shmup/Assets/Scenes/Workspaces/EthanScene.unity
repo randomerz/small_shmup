@@ -133,6 +133,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: fodder1
       objectReference: {fileID: 0}
+    - target: {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.017008066
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.676847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.029764116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.8214153
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5609964187031677963, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
       propertyPath: m_Offset.y
@@ -152,6 +177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 1.8246217
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609964187031677963, guid: e8a60047446a82c4bb92a4b1e299a812,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8627830439487882583, guid: e8a60047446a82c4bb92a4b1e299a812,
         type: 3}
@@ -218,8 +248,15 @@ PrefabInstance:
       propertyPath: moveSpeedSide
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1513194150870266117, guid: e8a60047446a82c4bb92a4b1e299a812, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8a60047446a82c4bb92a4b1e299a812, type: 3}
+--- !u!4 &435196010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4472182778379538282, guid: f0ef303d0b3d142debc34c6edc9d697a,
+    type: 3}
+  m_PrefabInstance: {fileID: 486606505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &448954871
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,16 +283,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 448954871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67ff1c72ba4fa1a4aa6fc66bc7d23771, type: 3}
+  m_Script: {fileID: 11500000, guid: 94329225ce15ad149b8a166eeada6b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.463
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
+  sounds: []
 --- !u!4 &448954873
 Transform:
   m_ObjectHideFlags: 0
@@ -301,6 +332,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196337692052661863, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 435196010}
+    - target: {fileID: 3196337692052661863, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: playerBullet
+      value: 
+      objectReference: {fileID: 5044447066210393863, guid: 16a084970778bca4ab656a213334e88c,
+        type: 3}
+    - target: {fileID: 3848773521390399096, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: currentHearts
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
