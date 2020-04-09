@@ -45,27 +45,35 @@ public class WeaponShotgun : MonoBehaviour
         {
             // calculates time bullet will take to hit player with player moving @ its current speed + direction
             //baseAngle = 180;
+            //needs to be updated with correct threshold
+            if (playerMovement.speed > bullet.GetComponent<Projectile>().speed)
+            {
+                Debug.Log("WARNING: Player Move Speed too high for predictive aiming.");
+                isAimedAtPlayerPredictive = false;
+                isAimedAtPlayerSimple = true;
+            }
             Vector3 playerPos = playerMovement.transform.position;
             float speed = playerMovement.speed;
             Vector3 rot = playerMovement.move;
             float tempAngle;
-            //find angle between enemy and player
             Vector3 diff = playerPos - transform.position;
-            //angle in radians
+            //angle in radians between enemy and player
             float angle = Mathf.Atan2(diff.y, diff.x);
+            //angle that player is pointed at
             float playerAngle = Mathf.Atan2(rot.y, rot.x);
-  
+            //x and y components for player movement
             float playerX = Mathf.Cos(playerAngle) * speed;
             float playerY = Mathf.Sin(playerAngle) * speed;
-            
+            //x and y components for bullet movement
             float bulletX = playerX;
             if (rot.x == 0 && rot.y == 0)
             {
                 bulletX = 0;
             }
             float bulletY = -1 * Mathf.Sqrt(Mathf.Pow(bullet.GetComponent<Projectile>().speed, 2) + Mathf.Pow(bulletX, 2));
+            //firing angle determined
             tempAngle = Mathf.Atan2(bulletY, bulletX);
-            Debug.Log(Mathf.Rad2Deg * angle);
+            //adjust for angle between enemy and player
             if ((angle * Mathf.Rad2Deg) < -90)
             {
                 baseAngle = tempAngle * Mathf.Rad2Deg + ((angle * Mathf.Rad2Deg) % 90);
