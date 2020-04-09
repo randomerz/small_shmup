@@ -32,4 +32,15 @@ public class FodderMovement : Enemy
         transform.position = transform.position + new Vector3(moveSpeed * Time.deltaTime * direction, 0, 0);
         timeSinceTurn += Time.deltaTime;
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+                player.TakeLife();
+            //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
+            Destroy(gameObject);
+        }
+    }
 }
