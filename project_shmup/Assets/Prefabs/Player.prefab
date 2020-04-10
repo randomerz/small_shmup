@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3c3d6f17494b840865099001ce69fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHearts: 0
+  currentHearts: 3
   maxHearts: 0
   hearts: []
   fullHeart: {fileID: 0}

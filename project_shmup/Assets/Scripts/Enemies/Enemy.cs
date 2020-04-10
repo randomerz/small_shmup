@@ -21,17 +21,7 @@ public class Enemy : MonoBehaviour
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            PlayerHealth player = collision.GetComponent<PlayerHealth>();
-            if (player != null)
-                player.TakeLife();
-            //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
-            Destroy(gameObject);
-        }
-    }
+    
 
 
     public void TakeDamage()
