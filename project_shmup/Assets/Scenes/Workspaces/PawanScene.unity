@@ -278,8 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291121935ed5e394692f0919caa17cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBullet: {fileID: 0}
-  genericBullet: {fileID: 0}
 --- !u!212 &308499251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -447,6 +445,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2250968397489643859, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250968397489643859, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
       propertyPath: m_LocalPosition.x

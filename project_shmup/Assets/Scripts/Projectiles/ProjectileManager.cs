@@ -6,24 +6,30 @@ using UnityEngine;
 public class ProjectileManager : MonoBehaviour
 {
     // ArrayStack myStack = new ArrayStack();
-    List<Projectile> enemyActiveBullets = new List<Projectile>();
-    List<PlayerBullet> playerActiveBullets = new List<PlayerBullet>();
 
-    Stack<Projectile> enemyInactiveBullets = new Stack<Projectile>();
-    public Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
+    Dictionary<string, Stack<Projectile>> inactiveBullets = new Dictionary<string, Stack<Projectile>>();
+    Dictionary<string, List<Projectile>> activeBullets = new Dictionary<string, List<Projectile>>();
+
+    List<PlayerBullet> playerActiveBullets = new List<PlayerBullet>();
+    Stack<PlayerBullet> playerInactiveBullets = new Stack<PlayerBullet>();
 
     void Start()
     {
 
     }
 
-    public Projectile CreateEnemyBullet(GameObject prefab)
+    public Projectile CreateEnemyBullet(GameObject prefab, string type)
     {
         Projectile bullet;
         // if already has bullet, remove from there
-        if (enemyInactiveBullets.Count > 0)
+        if (!inactiveBullets.ContainsKey(type))
         {
-            bullet = enemyInactiveBullets.Pop();
+            inactiveBullets.Add(type, new Stack<Projectile>());
+            activeBullets.Add(type, new List<Projectile>());
+        }
+        if (inactiveBullets[type].Count > 0)
+        {
+            bullet = inactiveBullets[type].Pop();
             bullet.gameObject.SetActive(true);
         }
         else
@@ -32,7 +38,7 @@ public class ProjectileManager : MonoBehaviour
             bullet = bulletGameObj.GetComponent<Projectile>();
         }
 
-        enemyActiveBullets.Add(bullet);
+        activeBullets[type].Add(bullet);
 
         Projectile prefabBullet = prefab.GetComponent<Projectile>();
         bullet.speed = prefabBullet.speed;
@@ -58,10 +64,10 @@ public class ProjectileManager : MonoBehaviour
         return bullet;
     }
 
-    public void RemoveEnemyBullet(Projectile bullet)
+    public void RemoveEnemyBullet(Projectile bullet, string type)
     {
-        enemyActiveBullets.Remove(bullet);
-        enemyInactiveBullets.Push(bullet);
+        activeBullets[type].Remove(bullet);
+        inactiveBullets[type].Push(bullet);
         bullet.gameObject.SetActive(false);
     }
 
