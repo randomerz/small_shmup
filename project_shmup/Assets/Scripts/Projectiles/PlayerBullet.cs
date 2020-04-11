@@ -31,6 +31,14 @@ public class PlayerBullet : Projectile
 
             Destroy(gameObject); // deletes bullet
         }
+        else if (hitInfo.gameObject.tag.Equals("Boss"))
+        {
+            BossManager boss = hitInfo.GetComponent<BossManager>();
+            if (boss!= null)
+            {
+                boss.TakeDamage();
+            }
+        }
     }
 
     public new void CheckBounds()

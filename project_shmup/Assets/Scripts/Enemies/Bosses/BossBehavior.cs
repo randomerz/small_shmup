@@ -7,7 +7,6 @@ public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing
-    public GameObject player;
     public GameObject bullet;
     public GameObject beam;
     public GameObject missile;
@@ -31,28 +30,23 @@ public class BossBehavior : MonoBehaviour
         l = new Vector3[4];
         rand = new System.Random();
     }
-
     // Update is called once per frame
     //Phase 1 slower teleportation with targeted shots
     //Phase 2 fast teleportation with missiles
     //Phase 3 Beam of death
-    void Update()
+    public void Teleport()
     {
-        cycle += Time.deltaTime;
-        if(cycle >= shift)
+        GameObject player = GameObject.Find("Player");
+        b = GeneratePos(player);
+        while (b != true)
         {
-            b = GeneratePos();
-            while (b != true)
-            {
-                b = GeneratePos();
-            }
-            cycle = 0;
-            transform.Rotate(0f, 0f, -prevRotate+FindAngle());
-            Vector3[] a = { transform.position, transform.position + new Vector3(0, 1, 0) };
-            firePoints.Add(bullet, a);
-            Shoot(bullet);
-            firePoints.Remove(bullet);
+            b = GeneratePos(player);
         }
+        transform.Rotate(0f, 0f, -prevRotate+FindAngle(player));
+        //Vector3[] a = { transform.position, transform.position + new Vector3(0, 1, 0) };
+        //firePoints.Add(bullet, a);
+        //Shoot(bullet);
+        //firePoints.Remove(bullet);
     }
     public void Shoot(GameObject bull)
     {
@@ -60,7 +54,8 @@ public class BossBehavior : MonoBehaviour
         for (var i = 0; i < fireArr.Length; ++i)
             Instantiate(bullet, fireArr[i], transform.rotation);
     }
-    public bool GeneratePos()
+    
+    public bool GeneratePos(GameObject player)
     {
         bottomBound = player.transform.position.y;
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
@@ -94,7 +89,7 @@ public class BossBehavior : MonoBehaviour
             ts[r] = tmp;
         }
     }
-    public float FindAngle()
+    public float FindAngle(GameObject player)
     {
         var x = transform.position.x - player.transform.position.x;
         var y = transform.position.y - player.transform.position.y;

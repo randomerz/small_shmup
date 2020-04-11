@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4472182778426144778, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
@@ -280,7 +280,8 @@ GameObject:
   m_Component:
   - component: {fileID: 466973350}
   - component: {fileID: 466973349}
-  - component: {fileID: 466973351}
+  - component: {fileID: 466973353}
+  - component: {fileID: 466973352}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Boss
@@ -352,7 +353,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &466973351
+--- !u!61 &466973352
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466973348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5625, y: 2.25}
+    newSize: {x: 2.5625, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5625, y: 2.25}
+  m_EdgeRadius: 0
+--- !u!114 &466973353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,19 +388,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 466973348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f9413572d2942e4580154671f731166, type: 3}
+  m_Script: {fileID: 11500000, guid: 08e95a3266416ab4daea3d65ac4550bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 175214480}
-  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
-  beam: {fileID: 0}
-  missile: {fileID: 0}
-  leftBound: -13
-  rightBound: 13
-  topBound: 9
-  bottomBound: 0
+  health: 100
   shift: 2
-  cycle: 0
 --- !u!1001 &730572911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 8627830439487882583, guid: 04ab85373adb3b44999f616067773558,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8627830439487882583, guid: 04ab85373adb3b44999f616067773558,
         type: 3}
