@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
     }
+    
+
 
     public void TakeDamage()
     {

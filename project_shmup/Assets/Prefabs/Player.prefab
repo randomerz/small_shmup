@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4472182778426144778}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4472182777617593502
 SpriteRenderer:
@@ -102,36 +102,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &4472182778379538283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4472182778379538282}
-  m_Layer: 0
-  m_Name: firePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4472182778379538282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4472182778379538283}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4472182778426144778}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4472182778426144781
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +115,8 @@ GameObject:
   - component: {fileID: 4472182778426144780}
   - component: {fileID: 4472182778426144777}
   - component: {fileID: 2250968397489643859}
+  - component: {fileID: 3848773521390399096}
+  - component: {fileID: -2836029982078046227}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -163,7 +135,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4472182778379538282}
   - {fileID: 4472182777617593488}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -230,6 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f0d85037f30034aafb2ba058284a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 12
+  move: {x: 0, y: 0, z: 0}
   shipFocus: {fileID: 4472182777617593489}
   leftBound: -13
   rightBound: 13
@@ -251,7 +224,7 @@ MonoBehaviour:
   firePoint: {fileID: 4472182778426144778}
   playerBullet: {fileID: 5044447066210393863, guid: 16a084970778bca4ab656a213334e88c,
     type: 3}
-  fireRate: 0.1
+  fireRate: 0.05
   timeSinceLastShot: 0.1
 --- !u!61 &2250968397489643859
 BoxCollider2D:
@@ -279,3 +252,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &3848773521390399096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472182778426144781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3c3d6f17494b840865099001ce69fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHearts: 3
+  maxHearts: 0
+  hearts: []
+  fullHeart: {fileID: 0}
+  brokenHeart: {fileID: 0}
+--- !u!50 &-2836029982078046227
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472182778426144781}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
