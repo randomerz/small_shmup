@@ -393,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   shift: 2
+  player: {fileID: 175214480}
 --- !u!1001 &730572911
 PrefabInstance:
   m_ObjectHideFlags: 0
