@@ -8,7 +8,7 @@ public class WeaponShotgun : MonoBehaviour
     public int numBullets;
     public float spread; // degrees of total cone
     private ProjectileManager bulletManager;
-    private string bulletType = "default";
+    private string bulletType = "straight_bullet";
 
     public float fireRate;
     private float timeSinceLastShot;

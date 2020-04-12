@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class PlayerBullet : Projectile
     void Start()
     {
         //rb.velocity = transform.up * speed; // makes the bullet move
+        type = "player";
+        projManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
     }
 
     
@@ -46,9 +49,14 @@ public class PlayerBullet : Projectile
         if (deleteIfOutOfBounds && (transform.position.x > rightBound + boundsOffset || transform.position.x < leftBound - boundsOffset || transform.position.y > topBound + boundsOffset || transform.position.y < bottomBound - boundsOffset))
         {
             if (projManager != null)
+            {
                 projManager.RemovePlayerBullet(this);
+            }
             else
+            {
+                Debug.Log("not pog");
                 Destroy(gameObject);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,16 +25,19 @@ public class ProjectileManager : MonoBehaviour
         // if already has bullet, remove from there
         if (!inactiveBullets.ContainsKey(type))
         {
+            Debug.Log("adding new type " + type);
             inactiveBullets.Add(type, new Stack<Projectile>());
             activeBullets.Add(type, new List<Projectile>());
         }
         if (inactiveBullets[type].Count > 0)
         {
+            Debug.Log("reusing bullet of type " + type);
             bullet = inactiveBullets[type].Pop();
             bullet.gameObject.SetActive(true);
         }
         else
         {
+            Debug.Log("making new");
             GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<Projectile>();
         }
@@ -45,7 +49,7 @@ public class ProjectileManager : MonoBehaviour
         return bullet;
     }
 
-    public PlayerBullet CreatePlayerBullet(GameObject prefab)
+    public PlayerBullet CreatePlayerBullet(GameObject prefab, Transform firePoint)
     {
         PlayerBullet bullet;
 
@@ -53,14 +57,18 @@ public class ProjectileManager : MonoBehaviour
         {
             bullet = playerInactiveBullets.Pop();
             bullet.gameObject.SetActive(true);
+            Debug.Log("Re-used player bullet");
         }
         else
         {
             GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<PlayerBullet>();
+            Debug.Log("Made player bullet");
         }
 
         playerActiveBullets.Add(bullet);
+        bullet.transform.position = firePoint.position;
+        bullet.transform.rotation = firePoint.rotation;
         return bullet;
     }
 
@@ -76,6 +84,7 @@ public class ProjectileManager : MonoBehaviour
         playerActiveBullets.Remove(bullet);
         playerInactiveBullets.Push(bullet);
         bullet.gameObject.SetActive(false);
+        Debug.Log("bullet deactivated");
     }
 
     void FixedUpdate()

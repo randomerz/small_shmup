@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,12 @@ public class PlayerWeapon : MonoBehaviour
     public GameObject playerBullet;
     public float fireRate = 0.1f;
     public float timeSinceLastShot = 0.1f;
+    private ProjectileManager bulletManager;
+
+    void Start()
+    {
+        bulletManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,6 +33,15 @@ public class PlayerWeapon : MonoBehaviour
 
     void Shoot() // shoots ;)
     {
-        Instantiate(playerBullet, firePoint.position, firePoint.rotation); // creates a bullet at firepoint
+        if (bulletManager != null)
+        {
+            GameObject b = bulletManager.CreatePlayerBullet(playerBullet, firePoint).gameObject;
+            Debug.Log(firePoint.position);
+        }
+        else
+        {
+            Instantiate(playerBullet, firePoint.position, firePoint.rotation); // creates a bullet at firepoint
+        }
+        
     }
 }

@@ -3,7 +3,11 @@ guid: 17d32475c29a49341ade650689346f94
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - firePoint: {instanceID: 0}
+  - playerBullet: {instanceID: 0}
+  - playerBulletSprite: {fileID: 21300000, guid: b00ed91549a4faf479fc5dce9fa10b8d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

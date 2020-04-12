@@ -22,6 +22,7 @@ public class Projectile : MonoBehaviour
     {
         GameObject camera = GameObject.Find("Main Camera");
         projManager = camera.GetComponent<ProjectileManager>();
+        Debug.Log(projManager);
     }
 
     // Update is called once per frame
@@ -47,9 +48,15 @@ public class Projectile : MonoBehaviour
         if (deleteIfOutOfBounds && (transform.position.x > rightBound + boundsOffset || transform.position.x < leftBound - boundsOffset || transform.position.y > topBound + boundsOffset || transform.position.y < bottomBound - boundsOffset))
         {
             if (projManager != null)
+            {
                 projManager.RemoveEnemyBullet(this, type);
+            }
             else
+            {
+                Debug.Log("joe");
                 Destroy(gameObject);
+            }
+
         }
     }
 }
