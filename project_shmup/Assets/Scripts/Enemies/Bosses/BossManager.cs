@@ -5,7 +5,7 @@ public class BossManager : MonoBehaviour
     public int health = 100;
     private int maxHP;
     public float shift = 2f;
-    private GameObject player;
+    public GameObject player;
 
     private BossBehavior behavior;
     private BossWeapon shooter;
@@ -27,7 +27,7 @@ public class BossManager : MonoBehaviour
             cycle += Time.deltaTime;
             if (cycle >= shift)
             {
-                behavior.Teleport();
+                behavior.Teleport(player);
                 cycle = 0f;
                 if(maxHP *.75 > health)
                 {

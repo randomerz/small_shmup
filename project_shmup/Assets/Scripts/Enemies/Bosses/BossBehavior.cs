@@ -34,9 +34,9 @@ public class BossBehavior : MonoBehaviour
     //Phase 1 slower teleportation with targeted shots
     //Phase 2 fast teleportation with missiles
     //Phase 3 Beam of death
-    public void Teleport()
+    public void Teleport(GameObject player)
     {
-        GameObject player = GameObject.Find("Player");
+        //GameObject player = GameObject.Find("Player");
         b = GeneratePos(player);
         while (b != true)
         {
