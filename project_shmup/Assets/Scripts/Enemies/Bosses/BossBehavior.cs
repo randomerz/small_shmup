@@ -55,7 +55,6 @@ public class BossBehavior : MonoBehaviour
     
     public bool GeneratePos()
     {
-        Debug.Log(player);
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
         float vshift = (Math.Abs(topBound) + Math.Abs(bottomBound)) * (float)rand.NextDouble(); //vertical shift
         Array.Clear(l, 0, l.Length);
@@ -64,7 +63,6 @@ public class BossBehavior : MonoBehaviour
         l[2] = (transform.position + new Vector3(hshift, -vshift, 0));
         l[3] = (transform.position + new Vector3(-hshift, -vshift, 0));
         Ruffle(l);
-        //UnityEngine.Debug.Log(l[0]);
         for (var i = 0; i < 4; ++i)
         {
             if (l[i].x > leftBound && l[i].x < rightBound && l[i].y < topBound && l[i].y > bottomBound && (l[i] - player.transform.position).magnitude > 2)
