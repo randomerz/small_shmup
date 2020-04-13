@@ -11,7 +11,7 @@ public class BossBehavior : MonoBehaviour
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
-    public float bottomBound;
+    public float bottomBound = -3;
     public float shift = 2.0f;
     public float cycle;
 
@@ -55,8 +55,6 @@ public class BossBehavior : MonoBehaviour
     
     public bool GeneratePos()
     {
-        Debug.Log(player);
-        bottomBound = player.transform.position.y;
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
         float vshift = (Math.Abs(topBound) + Math.Abs(bottomBound)) * (float)rand.NextDouble(); //vertical shift
         Array.Clear(l, 0, l.Length);
@@ -65,10 +63,9 @@ public class BossBehavior : MonoBehaviour
         l[2] = (transform.position + new Vector3(hshift, -vshift, 0));
         l[3] = (transform.position + new Vector3(-hshift, -vshift, 0));
         Ruffle(l);
-        UnityEngine.Debug.Log(l[0]);
         for (var i = 0; i < 4; ++i)
         {
-            if (l[i].x > leftBound && l[i].x < rightBound && l[i].y < topBound && l[i].y > bottomBound)
+            if (l[i].x > leftBound && l[i].x < rightBound && l[i].y < topBound && l[i].y > bottomBound && (l[i] - player.transform.position).magnitude > 2)
             {
                 transform.position = l[i];
                 return true;
@@ -90,11 +87,12 @@ public class BossBehavior : MonoBehaviour
     }
     public float FindAngle()
     {
-        var x = transform.position.x - player.transform.position.x;
         var y = transform.position.y - player.transform.position.y;
-        var e = (180/Math.PI)*Math.Atan((transform.position.x - player.transform.position.x) / (transform.position.y - player.transform.position.y));
-        UnityEngine.Debug.Log(e);
-        UnityEngine.Debug.Log(x/y);
+        var e = (180/Math.PI)*Math.Atan((transform.position.x - player.transform.position.x) / y);
+        if(y<0)
+        {
+            e += 180d;
+        }
         prevRotate = -(float)e;
         return prevRotate;
     }
