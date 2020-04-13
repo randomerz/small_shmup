@@ -67,7 +67,7 @@ public class WeaponShotgun : MonoBehaviour
             float playerY = Mathf.Sin(playerAngle) * speed;
             //x and y components for bullet movement
             float bulletX = playerX;
-            if (rot.x == 0 && rot.y == 0)
+            if (rot.x == 0)
             {
                 bulletX = 0;
             }
