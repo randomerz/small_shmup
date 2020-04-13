@@ -9,7 +9,6 @@ public class StraightBullet : Projectile
     void Start()
     {
         projManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
-        type = "straight_bullet";
 
     }
 

@@ -9,7 +9,6 @@ public class PlayerBullet : Projectile
     void Start()
     {
         //rb.velocity = transform.up * speed; // makes the bullet move
-        type = "player";
         projManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
     }
 
@@ -54,7 +53,6 @@ public class PlayerBullet : Projectile
             }
             else
             {
-                Debug.Log("not pog");
                 Destroy(gameObject);
             }
         }

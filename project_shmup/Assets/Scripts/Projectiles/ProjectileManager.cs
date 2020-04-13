@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,20 +18,20 @@ public class ProjectileManager : MonoBehaviour
 
     }
 
-    public Projectile CreateEnemyBullet(GameObject prefab, string type)
+    public Projectile CreateEnemyBullet(GameObject prefab)
     {
         Projectile bullet;
         // if already has bullet, remove from there
-        if (!inactiveBullets.ContainsKey(type))
+        if (!inactiveBullets.ContainsKey(prefab.name))
         {
-            Debug.Log("adding new type " + type);
-            inactiveBullets.Add(type, new Stack<Projectile>());
-            activeBullets.Add(type, new List<Projectile>());
+            Debug.Log("adding new prefab.name " + prefab.name);
+            inactiveBullets.Add(prefab.name, new Stack<Projectile>());
+            activeBullets.Add(prefab.name, new List<Projectile>());
         }
-        if (inactiveBullets[type].Count > 0)
+        if (inactiveBullets[prefab.name].Count > 0)
         {
-            Debug.Log("reusing bullet of type " + type);
-            bullet = inactiveBullets[type].Pop();
+            Debug.Log("reusing existing");
+            bullet = inactiveBullets[prefab.name].Pop();
             bullet.gameObject.SetActive(true);
         }
         else
@@ -42,7 +41,7 @@ public class ProjectileManager : MonoBehaviour
             bullet = bulletGameObj.GetComponent<Projectile>();
         }
 
-        activeBullets[type].Add(bullet);
+        activeBullets[prefab.name].Add(bullet);
 
         Projectile prefabBullet = prefab.GetComponent<Projectile>();
         bullet.speed = prefabBullet.speed;
@@ -72,10 +71,13 @@ public class ProjectileManager : MonoBehaviour
         return bullet;
     }
 
-    public void RemoveEnemyBullet(Projectile bullet, string type)
+    public void RemoveEnemyBullet(Projectile bullet)
     {
-        activeBullets[type].Remove(bullet);
-        inactiveBullets[type].Push(bullet);
+        string name = bullet.gameObject.name;
+        Debug.Log("verify this: " + name);
+        int index = name.IndexOf("(Clone)");
+        activeBullets[bullet.gameObject.name.Substring(0,index)].Remove(bullet);
+        inactiveBullets[bullet.gameObject.name.Substring(0,index)].Push(bullet);
         bullet.gameObject.SetActive(false);
     }
 
