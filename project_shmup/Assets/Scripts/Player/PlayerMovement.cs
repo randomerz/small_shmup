@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // player movement executed ////////////////////////////////////////////////////////
         Vector3 increment = move * speed * Time.deltaTime;
+        increment /= move.magnitude;
         Vector3 after = transform.position + increment;
         // player object bounds  ////////////////////////////////////////////////////////
         if (after.x < leftBound)

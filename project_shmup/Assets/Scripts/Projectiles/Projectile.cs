@@ -12,7 +12,6 @@ public class Projectile : MonoBehaviour
     public float bottomBound = -9;
     public float boundsOffset = 2;
     public bool deleteIfOutOfBounds = true;
-    public string type = "default";
     public float speed;
 
     //public GameObject impactEffect; // if we want an impact effect
@@ -49,11 +48,10 @@ public class Projectile : MonoBehaviour
         {
             if (projManager != null)
             {
-                projManager.RemoveEnemyBullet(this, type);
+                projManager.RemoveEnemyBullet(this);
             }
             else
             {
-                Debug.Log("joe");
                 Destroy(gameObject);
             }
 
