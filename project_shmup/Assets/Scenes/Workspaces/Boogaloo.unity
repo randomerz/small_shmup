@@ -396,6 +396,8 @@ MonoBehaviour:
   health: 100
   shift: 2
   player: {fileID: 175214480}
+  behavior: {fileID: 466973354}
+  shooter: {fileID: 466973351}
 --- !u!114 &466973354
 MonoBehaviour:
   m_ObjectHideFlags: 0

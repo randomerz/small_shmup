@@ -6,17 +6,17 @@ public class BossManager : MonoBehaviour
     private int maxHP;
     public float shift = 2f;
     public GameObject player;
+    public BossBehavior behavior;
+    public BossWeapon shooter;
 
-    private BossBehavior behavior;
-    private BossWeapon shooter;
+    private bool phase1 = true;
+    private bool phase2 = false;
+    private bool phase3 = false;
     private float cycle = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        behavior = new BossBehavior();
-        shooter = new BossWeapon();
         maxHP = health;
-        //player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
