@@ -70,6 +70,10 @@ public class WeaponShotgun : MonoBehaviour
             {
                 bulletX = 0;
             }
+            else if (playerMovement.rightBound - Mathf.Abs(playerPos.x) < 0.01)
+            {
+                bulletX = 0;
+            }
             float bulletY = -1 * Mathf.Sqrt(Mathf.Pow(bullet.GetComponent<Projectile>().speed, 2) + Mathf.Pow(bulletX, 2));
             //firing angle determined
             tempAngle = Mathf.Atan2(bulletY, bulletX);
