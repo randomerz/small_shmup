@@ -7,9 +7,7 @@ public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing
-    public GameObject bullet;
-    public GameObject beam;
-    public GameObject missile;
+    public GameObject player;
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
@@ -34,15 +32,15 @@ public class BossBehavior : MonoBehaviour
     //Phase 1 slower teleportation with targeted shots
     //Phase 2 fast teleportation with missiles
     //Phase 3 Beam of death
-    public void Teleport(GameObject player)
+    public void Teleport()
     {
         //GameObject player = GameObject.Find("Player");
-        b = GeneratePos(player);
+        b = GeneratePos();
         while (b != true)
         {
-            b = GeneratePos(player);
+            b = GeneratePos();
         }
-        transform.Rotate(0f, 0f, -prevRotate+FindAngle(player));
+        transform.Rotate(0f, 0f, -prevRotate+FindAngle());
         //Vector3[] a = { transform.position, transform.position + new Vector3(0, 1, 0) };
         //firePoints.Add(bullet, a);
         //Shoot(bullet);
@@ -52,11 +50,12 @@ public class BossBehavior : MonoBehaviour
     {
         Vector3[] fireArr = firePoints[bull];
         for (var i = 0; i < fireArr.Length; ++i)
-            Instantiate(bullet, fireArr[i], transform.rotation);
+            Instantiate(bull, fireArr[i], transform.rotation);
     }
     
-    public bool GeneratePos(GameObject player)
+    public bool GeneratePos()
     {
+        Debug.Log(player);
         bottomBound = player.transform.position.y;
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
         float vshift = (Math.Abs(topBound) + Math.Abs(bottomBound)) * (float)rand.NextDouble(); //vertical shift
@@ -89,7 +88,7 @@ public class BossBehavior : MonoBehaviour
             ts[r] = tmp;
         }
     }
-    public float FindAngle(GameObject player)
+    public float FindAngle()
     {
         var x = transform.position.x - player.transform.position.x;
         var y = transform.position.y - player.transform.position.y;
