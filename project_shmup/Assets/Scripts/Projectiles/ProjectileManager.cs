@@ -76,8 +76,14 @@ public class ProjectileManager : MonoBehaviour
         string name = bullet.gameObject.name;
         Debug.Log("verify this: " + name);
         int index = name.IndexOf("(Clone)");
-        activeBullets[bullet.gameObject.name.Substring(0,index)].Remove(bullet);
-        inactiveBullets[bullet.gameObject.name.Substring(0,index)].Push(bullet);
+        string newName = name.Substring(0, index);
+        foreach (string s in activeBullets.Keys)
+        {
+            Debug.Log(s);
+            //Debug.Log(activeBullets[s]);
+        }
+        activeBullets[newName].Remove(bullet);
+        inactiveBullets[newName].Push(bullet);
         bullet.gameObject.SetActive(false);
     }
 
@@ -89,9 +95,41 @@ public class ProjectileManager : MonoBehaviour
         Debug.Log("bullet deactivated");
     }
 
+    public void ClearBullets() // clears screen of all bullets
+    {
+        for (int i = 0; i < playerActiveBullets.Count; i++) //playerActiveBullets is a list
+        {
+            PlayerBullet currentBullet = playerActiveBullets[i];
+            if (currentBullet != null)
+            {
+                RemovePlayerBullet(currentBullet);
+                i--;
+            }
+        }
+
+        int count = 0;
+
+        foreach (KeyValuePair<string, List<Projectile>> item in activeBullets) // keys = strings = bullet type
+        {
+            if (item.Key != null)
+            {
+                for (int i = 0; i < activeBullets[item.Key].Count; i++) // value = list of projectiles
+                {
+                    Projectile currentBullet = activeBullets[item.Key][i];
+                    if (currentBullet != null)
+                    {
+                        RemoveEnemyBullet(currentBullet);
+                        i--;
+                        count++;
+                    }
+                }
+            }
+        } // i hope this shit works
+        Debug.Log(count);
+    }
+    
     void FixedUpdate()
     {
         // update active/ inactive bullets 
     }
 }
-

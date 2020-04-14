@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
             if (player != null)
                 player.TakeLife();
             //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
-            Destroy(gameObject);
+            RemoveBullet();
         }
     }
 
@@ -46,15 +46,19 @@ public class Projectile : MonoBehaviour
     {
         if (deleteIfOutOfBounds && (transform.position.x > rightBound + boundsOffset || transform.position.x < leftBound - boundsOffset || transform.position.y > topBound + boundsOffset || transform.position.y < bottomBound - boundsOffset))
         {
-            if (projManager != null)
-            {
-                projManager.RemoveEnemyBullet(this);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            RemoveBullet();
+        }
+    }
 
+    public void RemoveBullet()
+    {
+        if (projManager != null)
+        {
+            projManager.RemoveEnemyBullet(this);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

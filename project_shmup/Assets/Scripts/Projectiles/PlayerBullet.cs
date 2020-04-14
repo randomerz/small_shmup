@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class PlayerBullet : Projectile
 {
-
     void Start()
     {
         //rb.velocity = transform.up * speed; // makes the bullet move
         projManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
     }
 
-    
     void FixedUpdate()
     {
         CheckBounds();
@@ -31,7 +29,7 @@ public class PlayerBullet : Projectile
 
             //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
 
-            Destroy(gameObject); // deletes bullet
+            RemoveBullet();
         }
         else if (hitInfo.gameObject.tag.Equals("Boss"))
         {
@@ -47,14 +45,19 @@ public class PlayerBullet : Projectile
     {
         if (deleteIfOutOfBounds && (transform.position.x > rightBound + boundsOffset || transform.position.x < leftBound - boundsOffset || transform.position.y > topBound + boundsOffset || transform.position.y < bottomBound - boundsOffset))
         {
-            if (projManager != null)
-            {
-                projManager.RemovePlayerBullet(this);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            RemoveBullet();
+        }
+    }
+
+    public new void RemoveBullet()
+    {
+        if (projManager != null)
+        {
+            projManager.RemovePlayerBullet(this);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }
