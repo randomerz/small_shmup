@@ -8,9 +8,10 @@ public class WeaponShotgun : MonoBehaviour
     public int numBullets;
     public float spread; // degrees of total cone
     private ProjectileManager bulletManager;
-
+    //idk why this has to be static
     public float fireRate;
-    private float timeSinceLastShot;
+    public float delay;
+    private float timeTillNextShot;
 
     public bool isAimedAtPlayerSimple;
     public bool isAimedAtPlayerPredictive;
@@ -20,18 +21,19 @@ public class WeaponShotgun : MonoBehaviour
     {
         bulletManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        timeTillNextShot = delay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeSinceLastShot >= fireRate)
+        if (timeTillNextShot <= 0)
         {
             Shoot();
-            timeSinceLastShot = 0;
+            timeTillNextShot = fireRate;
         }
 
-        timeSinceLastShot += Time.deltaTime;
+        timeTillNextShot -= Time.deltaTime;
     }
 
     void Shoot()

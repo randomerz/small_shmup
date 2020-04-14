@@ -5,8 +5,8 @@ using UnityEngine;
 public class Mine : Enemy
 {
     public float timeToExplosion = 5.0f;
-    public float timeSinceExplosion = 0;
-    public bool exploding = false;
+    private float timeSinceExplosion = 0;
+    private bool exploding = false;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
