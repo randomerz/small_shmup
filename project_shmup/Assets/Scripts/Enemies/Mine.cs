@@ -5,6 +5,8 @@ using UnityEngine;
 public class Mine : Enemy
 {
     public float timeToExplosion = 5.0f;
+    public float timeSinceExplosion = 0;
+    public bool exploding = false;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -19,10 +21,22 @@ public class Mine : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        timeToExplosion -= Time.deltaTime;
-        if (timeToExplosion <= 3.5)
+        if (exploding == false)
         {
-            Explode();
+            timeToExplosion -= Time.deltaTime;
+            if (timeToExplosion <= 3.5)
+            {
+                Explode();
+                exploding = true;
+            }
+        }
+        else
+        {
+            timeSinceExplosion += Time.deltaTime;
+            if (timeSinceExplosion > 4.2)
+            {
+                Die();
+            }
         }
     }
 

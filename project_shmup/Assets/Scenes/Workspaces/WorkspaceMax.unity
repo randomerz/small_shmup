@@ -315,6 +315,8 @@ MonoBehaviour:
   moveSpeedSide: 0
   bullet: {fileID: 0}
   timeToExplosion: 5
+  timeSinceExplosion: 0
+  exploding: 0
   animator: {fileID: 418828063}
 --- !u!1 &533661522
 GameObject:
