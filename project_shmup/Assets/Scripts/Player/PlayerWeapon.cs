@@ -11,13 +11,15 @@ public class PlayerWeapon : MonoBehaviour
     public GameObject playerBullet;
     public float fireRate = 0.1f;
     public float timeSinceLastShot = 0.1f;
-    public float bombRate = 0;
+    public float bombRate = 3f;
     public float timeSinceLastBomb = 3f;
     private ProjectileManager bulletManager;
     public float currentBombs;
     public float maxBombs;
     public Image[] bombList;
     public Sprite bomb;
+    public CanvasGroup myCG;
+    private bool flash = false;
 
     void Start()
     {
@@ -29,6 +31,11 @@ public class PlayerWeapon : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
         timeSinceLastBomb += Time.deltaTime;
+
+        if (flash)
+        {
+            Fade();
+        }
 
         if (timeSinceLastShot > fireRate)
         {
@@ -72,21 +79,35 @@ public class PlayerWeapon : MonoBehaviour
             currentBombs--;
             DisplayBombs();
         }
-        // flash screen 
+        // flash screen
+        flash = true;
+        myCG.alpha = 1;
+
     }
 
-    public void DisplayBombs() // updates hp display 
+    void DisplayBombs() // updates hp display 
     {
         for (int i = 0; i < maxBombs; i++)
         {
             if (i < currentBombs)
             {
-                bombList[i].sprite = bomb;
+                bombList[i].enabled = true;
             }
             else
             {
-                bombList[i].sprite = null;
+                bombList[i].enabled = false;
             }
         }
     }
+
+    void Fade() // fades the white screen
+    {
+        myCG.alpha = myCG.alpha - Time.deltaTime;
+        if (myCG.alpha <= 0)
+        {
+            myCG.alpha = 0;
+            flash = false;
+        }
+    }
+
 }
