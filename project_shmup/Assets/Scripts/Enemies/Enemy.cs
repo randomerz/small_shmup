@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float health;
+    public float score;
 
     // THESE VARIABLES ARE DEPRECIATED AND WILL BE REMOVED
     public float moveSpeed;
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour
     public Projectile bullet;
 
     private EnemyWave wave;
+    private ScoreManager scoreM;
 
     //public GameObject deathEffect; // we can use this to make a death effect when he explodes
 
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     {
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
+        scoreM = GameObject.Find("Main Camera").GetComponent<ScoreManager>();
     }
     
 
@@ -39,10 +42,17 @@ public class Enemy : MonoBehaviour
         if (wave != null)
             wave.RemoveEnemy(this);
         // Instantiate(deathEffect, transform.position, Quaternion.identity); // see above
+        if (scoreM != null)
+            scoreM.AddScore(score);
+        else
+            Debug.LogWarning("scoring shits not here");
+
+
         Destroy(gameObject); // remove the enemy when he die
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         
