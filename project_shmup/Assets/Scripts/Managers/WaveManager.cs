@@ -43,6 +43,18 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    public List<Enemy> GetEnemies()
+    {
+        // loop through waves and check if they arent null
+        // NOT SURE it should be i < currentWave or i <= currentWave
+        List<Enemy> e = new List<Enemy>();
+        for (int i = 0; i < currentWave; i++)
+            if (waves[i] != null && waves[i].GetComponent<EnemyWave>())
+                foreach (Enemy j in waves[i].GetComponent<EnemyWave>().enemies)
+                    e.Add(j);
+        return e;
+    }
+
     public void StageComplete()
     {
         Debug.Log("Stage Complete!");

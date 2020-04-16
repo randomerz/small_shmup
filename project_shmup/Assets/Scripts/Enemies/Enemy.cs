@@ -7,13 +7,8 @@ public class Enemy : MonoBehaviour
     public float health;
     public float score;
 
-    // THESE VARIABLES ARE DEPRECIATED AND WILL BE REMOVED
-    public float moveSpeed;
-    public float moveSpeedSide;
-    public Projectile bullet;
-
     private EnemyWave wave;
-    private ScoreManager scoreM;
+    private ScoreManager scoreManager;
 
     //public GameObject deathEffect; // we can use this to make a death effect when he explodes
 
@@ -22,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
-        scoreM = GameObject.Find("Main Camera").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("Main Camera").GetComponent<ScoreManager>();
     }
     
 
@@ -37,21 +32,27 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // Called when hp = 0
     public void Die()
     {
+        // Instantiate(deathEffect, transform.position, Quaternion.identity); // see above
         if (wave != null)
             wave.RemoveEnemy(this);
-        // Instantiate(deathEffect, transform.position, Quaternion.identity); // see above
-        if (scoreM != null)
-            scoreM.AddScore(score);
+        if (scoreManager != null)
+            scoreManager.AddScore(score);
         else
             Debug.LogWarning("scoring shits not here");
 
+        RemoveGameObject();
+    }
 
+    // called when enemy should be removed from the scene
+    public void RemoveGameObject()
+    {
         Destroy(gameObject); // remove the enemy when he die
     }
 
-    // Update is called once per frame
+
     
     void Update()
     {

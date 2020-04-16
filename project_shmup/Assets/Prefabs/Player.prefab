@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f0d85037f30034aafb2ba058284a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 8
   move: {x: 0, y: 0, z: 0}
   shipFocus: {fileID: 4472182777617593489}
   leftBound: -13
@@ -209,6 +209,7 @@ MonoBehaviour:
   topBound: 9
   bottomBound: -9
   focusModifier: 0.44
+  canMove: 0
 --- !u!114 &4472182778426144777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +227,14 @@ MonoBehaviour:
     type: 3}
   fireRate: 0.1
   timeSinceLastShot: 0.1
+  bombRate: 3
+  timeSinceLastBomb: 3
+  currentBombs: 0
+  maxBombs: 0
+  bombList: []
+  bomb: {fileID: 0}
+  myCG: {fileID: 0}
+  canShoot: 0
 --- !u!61 &2250968397489643859
 BoxCollider2D:
   m_ObjectHideFlags: 0

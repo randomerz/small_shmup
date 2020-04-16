@@ -11,6 +11,8 @@ public class FodderMovement : Enemy
     public float bottomBound = -9;
     //distance from anchor of object to outside of hitbox
     public float offset = -1.0f;
+
+    public float moveSpeed = 8f;
     //1 is moving right, -1 is moving left
     public int direction = 1;
     System.Random rand = new System.Random();

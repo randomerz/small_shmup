@@ -56,6 +56,8 @@ public class WeaponShotgun : MonoBehaviour
             }
             Vector3 playerPos = playerMovement.transform.position;
             float speed = playerMovement.speed;
+            if (playerMovement.isFocused)
+                speed *= playerMovement.focusModifier;
             Vector3 rot = playerMovement.move;
             float tempAngle;
             Vector3 diff = playerPos - transform.position;

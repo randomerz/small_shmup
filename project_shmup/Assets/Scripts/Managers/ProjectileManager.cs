@@ -24,19 +24,19 @@ public class ProjectileManager : MonoBehaviour
         // if already has bullet, remove from there
         if (!inactiveBullets.ContainsKey(prefab.name))
         {
-            Debug.Log("adding new prefab.name " + prefab.name);
+            //Debug.Log("adding new prefab.name " + prefab.name);
             inactiveBullets.Add(prefab.name, new Stack<Projectile>());
             activeBullets.Add(prefab.name, new List<Projectile>());
         }
         if (inactiveBullets[prefab.name].Count > 0)
         {
-            Debug.Log("reusing existing");
+            //Debug.Log("reusing existing");
             bullet = inactiveBullets[prefab.name].Pop();
             bullet.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log("making new");
+            //Debug.Log("making new");
             GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<Projectile>();
         }
@@ -56,13 +56,13 @@ public class ProjectileManager : MonoBehaviour
         {
             bullet = playerInactiveBullets.Pop();
             bullet.gameObject.SetActive(true);
-            Debug.Log("Re-used player bullet");
+            //Debug.Log("Re-used player bullet");
         }
         else
         {
             GameObject bulletGameObj = Instantiate(prefab);
             bullet = bulletGameObj.GetComponent<PlayerBullet>();
-            Debug.Log("Made player bullet");
+            //Debug.Log("Made player bullet");
         }
 
         playerActiveBullets.Add(bullet);
@@ -74,12 +74,12 @@ public class ProjectileManager : MonoBehaviour
     public void RemoveEnemyBullet(Projectile bullet)
     {
         string name = bullet.gameObject.name;
-        Debug.Log("verify this: " + name);
+        //Debug.Log("verify this: " + name);
         int index = name.IndexOf("(Clone)");
         string newName = name.Substring(0, index);
         foreach (string s in activeBullets.Keys)
         {
-            Debug.Log(s);
+            //Debug.Log(s);
             //Debug.Log(activeBullets[s]);
         }
         activeBullets[newName].Remove(bullet);
@@ -92,7 +92,7 @@ public class ProjectileManager : MonoBehaviour
         playerActiveBullets.Remove(bullet);
         playerInactiveBullets.Push(bullet);
         bullet.gameObject.SetActive(false);
-        Debug.Log("bullet deactivated");
+        //Debug.Log("bullet deactivated");
     }
 
     public void ClearBullets() // clears screen of all bullets

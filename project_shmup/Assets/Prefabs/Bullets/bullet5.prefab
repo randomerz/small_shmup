@@ -124,8 +124,7 @@ MonoBehaviour:
   bottomBound: -9
   boundsOffset: 2
   deleteIfOutOfBounds: 1
-  type: default
-  speed: 10
+  speed: 12
 --- !u!50 &726644891513755945
 Rigidbody2D:
   serializedVersion: 4

@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public float topBound;
     public float bottomBound;
     public float focusModifier;
+    public bool isFocused;
+
+    public bool canMove;
     
 
     // Controls: arrows for normal movement
@@ -97,9 +100,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             move = move * focusModifier;
+            isFocused = true;
             shipFocus.SetActive(true);
         } else
         {
+            isFocused = false;
             shipFocus.SetActive(false);
         }
         // player movement calculations end here ////////////////////////////////////////////////////////
@@ -108,8 +113,12 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // player movement executed ////////////////////////////////////////////////////////
+        if (move.magnitude == 0)
+            return;
         Vector3 increment = move * speed * Time.deltaTime;
         increment /= move.magnitude;
+        if (isFocused)
+            increment *= focusModifier;
         Vector3 after = transform.position + increment;
         // player object bounds  ////////////////////////////////////////////////////////
         if (after.x < leftBound)

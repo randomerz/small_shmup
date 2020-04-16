@@ -21,6 +21,8 @@ public class PlayerWeapon : MonoBehaviour
     public CanvasGroup myCG;
     private bool flash = false;
 
+    public bool canShoot;
+
     void Start()
     {
         bulletManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
@@ -62,7 +64,7 @@ public class PlayerWeapon : MonoBehaviour
         if (bulletManager != null)
         {
             GameObject b = bulletManager.CreatePlayerBullet(playerBullet, firePoint).gameObject;
-            Debug.Log(firePoint.position);
+            //Debug.Log(firePoint.position);
         }
         else
         {
