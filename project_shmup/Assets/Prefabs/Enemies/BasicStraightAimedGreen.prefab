@@ -98,9 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  moveSpeed: 0
-  moveSpeedSide: 0
-  bullet: {fileID: 5461989681818812380, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  score: 0
+  shieldPrefab: {fileID: 7627403367780569782, guid: 699270281543b8b4c90ef261625ad7cb,
+    type: 3}
+  isShielded: 0
+  shieldHealth: 0
 --- !u!114 &3004774518676600487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +119,7 @@ MonoBehaviour:
   numBullets: 3
   spread: 30
   fireRate: 1.5
+  delay: 0
   isAimedAtPlayerSimple: 0
   isAimedAtPlayerPredictive: 1
   playerMovement: {fileID: 0}

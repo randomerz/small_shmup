@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     private EnemyWave wave;
     private ScoreManager scoreManager;
 
-    public GameObject shield;
+    private GameObject shield;
+    public GameObject shieldPrefab;
     public bool isShielded = false;
     public float shieldHealth = 0;
 
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        shield = Instantiate(shieldPrefab, transform.position, Quaternion.identity, transform);
         shield.SetActive(isShielded);
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
             if (shieldHealth == 0)
             {
                 isShielded = false;
+                shield.SetActive(false);
             }
         }
         else
@@ -45,6 +48,11 @@ public class Enemy : MonoBehaviour
                 Die(); // die :^)
             }
         }
+    }
+
+    public void DestroyShield()
+    {
+
     }
 
     // Called when hp = 0
@@ -71,6 +79,6 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        shield.SetActive(isShielded);
+        
     }
 }
