@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponShotgun : MonoBehaviour
 {
     public GameObject bullet;
+    public GameManager bulletSpawn;
     public int numBullets;
     public float spread; // degrees of total cone
     private ProjectileManager bulletManager;
@@ -116,7 +117,7 @@ public class WeaponShotgun : MonoBehaviour
             }
             else
             {
-                Instantiate(bullet, transform.position, Quaternion.Euler(0f, a, 0f));
+                Instantiate(bullet, bulletSpawn.transform.position, Quaternion.Euler(0f, a, 0f));
             }
         }
     }

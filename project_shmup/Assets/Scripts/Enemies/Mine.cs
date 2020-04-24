@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mine : Enemy
+public class Mine : MonoBehaviour
 {
     public float timeToExplosion = 5.0f;
     private float timeSinceExplosion = 0;
     private bool exploding = false;
     public Animator animator;
+    public Enemy enemyScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class Mine : Enemy
             timeSinceExplosion += Time.deltaTime;
             if (timeSinceExplosion > 4.2)
             {
-                Die();
+                enemyScript.Die();
             }
         }
     }
