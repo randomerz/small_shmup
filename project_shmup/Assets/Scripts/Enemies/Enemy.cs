@@ -10,11 +10,16 @@ public class Enemy : MonoBehaviour
     private EnemyWave wave;
     private ScoreManager scoreManager;
 
+    public GameObject shield;
+    public bool isShielded = false;
+    public float shieldHealth = 0;
+
     //public GameObject deathEffect; // we can use this to make a death effect when he explodes
 
     // Start is called before the first frame update
     void Start()
     {
+        shield.SetActive(isShielded);
         if (transform.parent != null)
             wave = transform.parent.GetComponent<EnemyWave>();
         scoreManager = GameObject.Find("Main Camera").GetComponent<ScoreManager>();
@@ -24,11 +29,21 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage()
     {
-        health -= 1; // subtract damage from health points
-
-        if (health <= 0) // if the enemy runs out of health
+        if (isShielded == true)
         {
-            Die(); // die :^)
+            shieldHealth -= 1;
+            if (shieldHealth == 0)
+            {
+                isShielded = false;
+            }
+        }
+        else
+        {
+            health -= 1; // subtract damage from health points
+            if (health <= 0) // if the enemy runs out of health
+            {
+                Die(); // die :^)
+            }
         }
     }
 
@@ -56,6 +71,6 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        
+        shield.SetActive(isShielded);
     }
 }
