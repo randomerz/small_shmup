@@ -209,6 +209,7 @@ MonoBehaviour:
   topBound: 9
   bottomBound: -9
   focusModifier: 0.44
+  isFocused: 0
   canMove: 0
 --- !u!114 &4472182778426144777
 MonoBehaviour:
@@ -232,7 +233,7 @@ MonoBehaviour:
   currentBombs: 0
   maxBombs: 0
   bombList: []
-  bomb: {fileID: 0}
+  bomb: {fileID: 21300000, guid: 0e5a5b05bfec3fe42ba665ed9ecb5875, type: 3}
   myCG: {fileID: 0}
   canShoot: 0
 --- !u!61 &2250968397489643859
@@ -274,10 +275,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHearts: 3
-  maxHearts: 0
-  hearts: []
-  fullHeart: {fileID: 0}
-  brokenHeart: {fileID: 0}
+  maxHearts: 3
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 677af3cc33e747f42b143ab5459dbbc1, type: 3}
+  brokenHeart: {fileID: 21300000, guid: f5297743f04bbaf46a61ae8b83396a5e, type: 3}
 --- !u!50 &-2836029982078046227
 Rigidbody2D:
   serializedVersion: 4

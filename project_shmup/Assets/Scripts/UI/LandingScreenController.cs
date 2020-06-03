@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LandingScreenController : MonoBehaviour
 {
@@ -54,6 +54,12 @@ public class LandingScreenController : MonoBehaviour
         isOptionsOpen = false;
         mainMenuPanel.SetActive(true);
         optionsPanel.SetActive(false);
+    }
+
+    public void LoadStage(int i)
+    {
+        print("loading stage " + i);
+        SceneManager.LoadScene("Stage" + i);
     }
 
 
