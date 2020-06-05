@@ -20,7 +20,7 @@ public class EnemyWave : MonoBehaviour
     {
         waveManager = GameObject.Find("Main Camera").GetComponent<WaveManager>();
         foreach (Enemy e in GetComponentsInChildren<Enemy>())
-            enemies.Add(e);
+            AddEnemyToWave(e);
     }
     
     void FixedUpdate()
@@ -30,15 +30,19 @@ public class EnemyWave : MonoBehaviour
             TrySpawnNextWave();
     }
 
-    public void TrySpawnNextWave()
+    public void AddEnemyToWave(Enemy e)
     {
-        if (!waveCalled)
-            waveManager.SpawnNextWave();
-        waveCalled = true;
+        if (e.gameObject.GetComponent<Shielder>() != null)
+            e.gameObject.GetComponent<Shielder>().myWave = this;
+        enemies.Add(e);
     }
 
     public void RemoveEnemy(Enemy e)
     {
+        // if shielder, removes all shields bc lazy solution
+        if (e.gameObject.GetComponent<Shielder>() != null)
+            e.gameObject.GetComponent<Shielder>().RemoveAllShields();
+
         Destroy(e.gameObject);
         enemies.Remove(e);
         if (enemies.Count == 0)
@@ -47,6 +51,13 @@ public class EnemyWave : MonoBehaviour
                 TrySpawnNextWave();
             RemoveWave();
         }
+    }
+
+    public void TrySpawnNextWave()
+    {
+        if (!waveCalled)
+            waveManager.SpawnNextWave();
+        waveCalled = true;
     }
 
     public void RemoveWave()

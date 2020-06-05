@@ -46,11 +46,13 @@ public class PlayerHealth : MonoBehaviour
         {
             if (i < currentHearts)
             {
-                hearts[i].sprite = fullHeart;
+                if (hearts[i] != null)
+                    hearts[i].sprite = fullHeart;
             }
             else
             {
-                hearts[i].sprite = brokenHeart;
+                if (hearts[i] != null)
+                    hearts[i].sprite = brokenHeart;
             }
         }
     }
