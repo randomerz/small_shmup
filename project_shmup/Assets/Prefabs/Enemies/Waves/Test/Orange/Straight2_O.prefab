@@ -191,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicStraightOrange (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: e0c8d1863063abb4eae8090bafa2be59,
+        type: 3}
+      propertyPath: delay
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: e0c8d1863063abb4eae8090bafa2be59,
         type: 3}
       propertyPath: m_LocalPosition.x

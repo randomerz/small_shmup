@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4147017758064488417}
   - component: {fileID: 4147017758064488446}
-  - component: {fileID: 4147017758064488447}
   - component: {fileID: 4147017758064488445}
-  - component: {fileID: 1052886223434939918}
+  - component: {fileID: 8229124977875256396}
+  - component: {fileID: -4573460670499912310}
   m_Layer: 0
   m_Name: WavyCircleGreen
   m_TagString: Enemy
@@ -85,29 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4147017758064488447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147017758064488442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea823d6734e43742a750ec2bb6e72d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  moveSpeed: 2
-  moveSpeedSide: 5
-  bullet: {fileID: 0}
-  leftBound: -13
-  rightBound: 13
-  topBound: 9
-  bottomBound: -9
-  offset: -1
-  direction: 1
-  timeSinceTurn: 0
 --- !u!61 &4147017758064488445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &1052886223434939918
+--- !u!114 &8229124977875256396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,11 +120,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 4147017758064488442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11bab51a4b6cefe45b92ea09ec9f3873, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c32eee0f934e96468559dd12745bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -1.01
-  enemyBullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf,
-    type: 3}
-  fireRate: 0.5
-  timeSinceLastShot: 0
+  health: 10
+  score: 0
+  tempHealth: 0
+--- !u!114 &-4573460670499912310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147017758064488442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 0}
+  numBullets: 3
+  spread: 30
+  fireRate: 1.5
+  delay: 0
+  isAimedAtPlayerSimple: 0
+  isAimedAtPlayerPredictive: 0
+  playerMovement: {fileID: 0}

@@ -24,13 +24,13 @@ MonoBehaviour:
   useDistance: 1
   distToTravel: -4
   timeToTake: 1
---- !u!114 &6914265997964642052
+--- !u!114 &6914265998993620670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565818236138303285}
+  m_GameObject: {fileID: 2565818235829060898}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
@@ -72,6 +72,30 @@ MonoBehaviour:
   useDistance: 1
   distToTravel: -4
   timeToTake: 1
+--- !u!114 &6914265997964642052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565818236138303285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projManager: {fileID: 0}
+  leftBound: -16
+  rightBound: 16
+  topBound: 13
+  bottomBound: -9
+  boundsOffset: 2
+  deleteIfOutOfBounds: 1
+  speed: -8
+  acceleration: 0
+  useDistance: 1
+  distToTravel: -4
+  timeToTake: 1
 --- !u!1 &6914265998750442707
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +107,7 @@ GameObject:
   - component: {fileID: 6914265998750442705}
   - component: {fileID: 6914265998750442704}
   m_Layer: 0
-  m_Name: StraightWave4
+  m_Name: Straight4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,30 +148,6 @@ MonoBehaviour:
   conditionAllEnemiesDead: 1
   conditionTimePassed: 0
   timeToWait: 1
---- !u!114 &6914265998993620670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565818235829060898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projManager: {fileID: 0}
-  leftBound: -16
-  rightBound: 16
-  topBound: 13
-  bottomBound: -9
-  boundsOffset: 2
-  deleteIfOutOfBounds: 1
-  speed: -8
-  acceleration: 0
-  useDistance: 1
-  distToTravel: -4
-  timeToTake: 1
 --- !u!1001 &6914265998155506209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicStraightGreen (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: 8678b2cac12c199458228fb512f1e352,
+        type: 3}
+      propertyPath: delay
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: 8678b2cac12c199458228fb512f1e352,
         type: 3}
@@ -241,6 +246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicStraightGreen (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: 8678b2cac12c199458228fb512f1e352,
+        type: 3}
+      propertyPath: delay
+      value: 1.125
+      objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: 8678b2cac12c199458228fb512f1e352,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,6 +331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicStraightGreen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: 8678b2cac12c199458228fb512f1e352,
+        type: 3}
+      propertyPath: delay
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: 8678b2cac12c199458228fb512f1e352,
         type: 3}

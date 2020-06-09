@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4150168289249536263
+--- !u!114 &8089662881224319217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174428921604945750}
+  m_GameObject: {fileID: 879917615833961354}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
@@ -24,13 +24,37 @@ MonoBehaviour:
   useDistance: 1
   distToTravel: -4
   timeToTake: 1
---- !u!114 &5359547132568502381
+--- !u!114 &8001285403681934681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7751745716834881448}
+  m_GameObject: {fileID: 1057282517011592999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projManager: {fileID: 0}
+  leftBound: -16
+  rightBound: 16
+  topBound: 13
+  bottomBound: -9
+  boundsOffset: 2
+  deleteIfOutOfBounds: 1
+  speed: -8
+  acceleration: 0
+  useDistance: 1
+  distToTravel: -4
+  timeToTake: 1
+--- !u!114 &3186186524868283161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207966438269030550}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
@@ -101,13 +125,13 @@ MonoBehaviour:
   conditionAllEnemiesDead: 1
   conditionTimePassed: 0
   timeToWait: 1
---- !u!114 &3186186524868283161
+--- !u!114 &5359547132568502381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2207966438269030550}
+  m_GameObject: {fileID: 7751745716834881448}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
@@ -125,37 +149,13 @@ MonoBehaviour:
   useDistance: 1
   distToTravel: -4
   timeToTake: 1
---- !u!114 &8001285403681934681
+--- !u!114 &4150168289249536263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057282517011592999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projManager: {fileID: 0}
-  leftBound: -16
-  rightBound: 16
-  topBound: 13
-  bottomBound: -9
-  boundsOffset: 2
-  deleteIfOutOfBounds: 1
-  speed: -8
-  acceleration: 0
-  useDistance: 1
-  distToTravel: -4
-  timeToTake: 1
---- !u!114 &8089662881224319217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879917615833961354}
+  m_GameObject: {fileID: 8174428921604945750}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e57f2c6b60b77746bb650c2de173428, type: 3}
@@ -347,6 +347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicStraightGreen (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: 8678b2cac12c199458228fb512f1e352,
+        type: 3}
+      propertyPath: delay
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: 8678b2cac12c199458228fb512f1e352,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -427,6 +432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicStraightGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966656265623809157, guid: 8678b2cac12c199458228fb512f1e352,
+        type: 3}
+      propertyPath: delay
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8966656265623809158, guid: 8678b2cac12c199458228fb512f1e352,
         type: 3}

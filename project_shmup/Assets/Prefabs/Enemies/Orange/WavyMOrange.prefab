@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1977729456273487747}
   - component: {fileID: 1977729456273487746}
   - component: {fileID: 1977729456273487751}
-  - component: {fileID: 1700716501816467973}
-  - component: {fileID: -3136053160832870041}
+  - component: {fileID: -654161832983461942}
+  - component: {fileID: 643740200486681048}
   m_Layer: 0
-  m_Name: WavyMGreen
+  m_Name: WavyMOrange
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5728418346452931076, guid: c725196bba96f48409541acd5204372b,
+  m_Sprite: {fileID: -8195382631346896920, guid: 4c610e1eda3da694992699466f9ccf7d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &1700716501816467973
+--- !u!114 &-654161832983461942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,10 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c32eee0f934e96468559dd12745bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
   score: 0
   tempHealth: 0
---- !u!114 &-3136053160832870041
+--- !u!114 &643740200486681048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
   bulletSpawn: {fileID: 0}
-  numBullets: 3
-  spread: 30
+  numBullets: 5
+  spread: 35
   fireRate: 1.5
   delay: 0
   isAimedAtPlayerSimple: 0
