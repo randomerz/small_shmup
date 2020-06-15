@@ -2,12 +2,12 @@
 
 public class BossManager : MonoBehaviour
 {
-    public int health = 100;
-    private int maxHP;
+    public int maxHP;
+    private int health;
     public float shift = 2f;
     public GameObject player;
     public BossBehavior behavior;
-    public BossWeapon shooter;
+    //public BossWeapon shooter;
 
     private bool phase1 = true;
     private bool phase2 = false;
@@ -16,7 +16,7 @@ public class BossManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHP = health;
+        health = maxHP;
     }
 
     // Update is called once per frame

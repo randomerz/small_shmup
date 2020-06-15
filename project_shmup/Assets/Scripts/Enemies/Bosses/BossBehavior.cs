@@ -45,14 +45,7 @@ public class BossBehavior : MonoBehaviour
         //firePoints.Add(bullet, a);
         //Shoot(bullet);
         //firePoints.Remove(bullet);
-    }
-    public void Shoot(GameObject bull)
-    {
-        Vector3[] fireArr = firePoints[bull];
-        for (var i = 0; i < fireArr.Length; ++i)
-            Instantiate(bull, fireArr[i], transform.rotation);
-    }
-    
+    }    
     public bool GeneratePos()
     {
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift
