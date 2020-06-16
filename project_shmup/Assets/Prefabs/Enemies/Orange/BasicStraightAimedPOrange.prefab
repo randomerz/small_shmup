@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3004774518676600487}
   - component: {fileID: 3500746918400452473}
   m_Layer: 0
-  m_Name: BasicStraightAimedPurple
+  m_Name: BasicStraightAimedOrange
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2737733664110356590, guid: 9a6e4b3feb0bee64892dad27629726a3,
+  m_Sprite: {fileID: 6564640671502643098, guid: 4c610e1eda3da694992699466f9ccf7d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c32eee0f934e96468559dd12745bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 20
   score: 0
   tempHealth: 0
 --- !u!114 &3004774518676600487
@@ -114,12 +114,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
   bulletSpawn: {fileID: 0}
-  numBullets: 7
-  spread: 40
+  numBullets: 5
+  spread: 35
   fireRate: 1.5
   delay: 0
-  isAimedAtPlayerSimple: 1
-  isAimedAtPlayerPredictive: 0
+  isAimedAtPlayerSimple: 0
+  isAimedAtPlayerPredictive: 1
   playerMovement: {fileID: 0}
 --- !u!61 &3500746918400452473
 BoxCollider2D:

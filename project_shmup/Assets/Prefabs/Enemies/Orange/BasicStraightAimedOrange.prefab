@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6564640671502643098, guid: 4c610e1eda3da694992699466f9ccf7d,
+  m_Sprite: {fileID: 8291333328672338629, guid: 4c610e1eda3da694992699466f9ccf7d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   spread: 35
   fireRate: 1.5
   delay: 0
-  isAimedAtPlayerSimple: 0
-  isAimedAtPlayerPredictive: 1
+  isAimedAtPlayerSimple: 1
+  isAimedAtPlayerPredictive: 0
   playerMovement: {fileID: 0}
 --- !u!61 &3500746918400452473
 BoxCollider2D:
