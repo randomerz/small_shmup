@@ -1134,12 +1134,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 1614467346235442971, guid: 352219eb230308a4f9932f0c97ea7b23, type: 3}
+  - {fileID: 1614467346235442971, guid: bc352d0b0a9c0314d99df5495e3603f4, type: 3}
   - {fileID: 2164979313510607099, guid: 495c4bd0a46b1c745999feeee85d5410, type: 3}
   - {fileID: 6914265998750442707, guid: c6e01bbc6cb8c2f46a879ce88106ff9d, type: 3}
   - {fileID: 2164979313510607099, guid: 2a0081b44972e0b4187f2507db82767b, type: 3}
   - {fileID: 2164979313510607099, guid: e36473fcae6b4da49aede9b35648ce25, type: 3}
   - {fileID: 3993921380581998113, guid: ac6b81b865abca54bbab19db4a7919b0, type: 3}
-  - {fileID: 2164979313510607099, guid: 8a2403e83154101459174fec9e98b55a, type: 3}
   currentWave: 0
   infinite: 0
 --- !u!1 &2031906727
