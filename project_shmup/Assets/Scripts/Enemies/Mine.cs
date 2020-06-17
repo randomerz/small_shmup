@@ -6,10 +6,16 @@ public class Mine : MonoBehaviour
 {
     public float timeToExplosion = 5.0f;
     private float timeSinceExplosion = 0;
+    public bool shouldTPIn = false;
     private bool exploding = false;
     public Animator animator;
     public Enemy enemyScript;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        animator.SetBool("tp", shouldTPIn);
+    }
+
     void Start()
     {
         if (timeToExplosion < 3.5)
