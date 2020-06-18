@@ -12,10 +12,14 @@ public class AcceleratedChasePoints : MonoBehaviour
 
     public List<Vector3> points = new List<Vector3>();
     public float minDistToPoint = 2f;
-    public float leftBound = -7;
-    public float rightBound = 7;
-    public float topBound = 7;
-    public float bottomBound = 0;
+    public float pointsLeftBound = -7;
+    public float pointsRightBound = 7;
+    public float pointsTopBound = 7;
+    public float pointsBottomBound = 0;
+    public float restraintLeftBound = -9;
+    public float restraintRightBound = 9;
+    public float restraintTopBound = 9;
+    public float restraintBottomBound = -9;
 
     void Start()
     {
@@ -51,11 +55,14 @@ public class AcceleratedChasePoints : MonoBehaviour
         //if (y + height > canvas.getHeight()) { y = canvas.getHeight() - height; v.y = -v.y * .5f; v.x *= .5f; }
 
         // restrained in box
-        //float r = width / 2;
-        //if (x < 0) { x = 0; v.x = -v.x * .5f; v.y *= .5f; }
-        //if (y < 0) { y = 0; v.y = -v.y * .5f; v.x *= .5f; }
-        //if (x + width > canvas.getWidth()) { x = canvas.getWidth() - width; v.x = -v.x * .5f; v.y *= .5f; }
-        //if (y + height > canvas.getHeight()) { y = canvas.getHeight() - height; v.y = -v.y * .5f; v.x *= .5f; }
+        //if (transform.position.x < restraintLeftBound)   { transform.position = new Vector2(restraintLeftBound,   transform.position.y); v.x = 0; }
+        //if (transform.position.y < restraintBottomBound) { transform.position = new Vector2(transform.position.x, restraintBottomBound); v.y = 0; }
+        //if (transform.position.x > restraintRightBound)  { transform.position = new Vector2(restraintRightBound,  transform.position.y); v.x = 0; }
+        //if (transform.position.y > restraintTopBound)    { transform.position = new Vector2(transform.position.x,    restraintTopBound); v.y = 0; }
+        if (transform.position.x < restraintLeftBound)   { v.x = Mathf.Max(0, v.x); }
+        if (transform.position.y < restraintBottomBound) { v.y = Mathf.Max(0, v.y); }
+        if (transform.position.x > restraintRightBound)  { v.x = Mathf.Min(0, v.x); }
+        if (transform.position.y > restraintTopBound)    { v.y = Mathf.Min(0, v.y); }
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90));
         if ((points[0] - transform.position).magnitude < minDistToPoint)
@@ -66,7 +73,7 @@ public class AcceleratedChasePoints : MonoBehaviour
 
     private void AddNewPointRandom()
     {
-        points.Add(new Vector3(Random.Range(leftBound, rightBound), Random.Range(bottomBound, topBound)));
+        points.Add(new Vector3(Random.Range(pointsLeftBound, pointsRightBound), Random.Range(pointsBottomBound, pointsTopBound)));
     }
 
     void OnDrawGizmosSelected()

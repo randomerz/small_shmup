@@ -119,7 +119,7 @@ MonoBehaviour:
   parentEnemy: {fileID: 8319327418842105246}
   spawnPoint: {fileID: 8319327419992395782}
   fireRate: 2
-  delay: 0
+  delay: 1
 --- !u!114 &8319327418842105235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,10 +137,14 @@ MonoBehaviour:
   dragFactor: 0.2
   points: []
   minDistToPoint: 2
-  leftBound: -7
-  rightBound: 7
-  topBound: 7
-  bottomBound: 0
+  pointsLeftBound: -7
+  pointsRightBound: 7
+  pointsTopBound: 7
+  pointsBottomBound: 0
+  restraintLeftBound: -8.5
+  restraintRightBound: 8.5
+  restraintTopBound: 8.5
+  restraintBottomBound: -8.5
 --- !u!58 &-1106217783875353063
 CircleCollider2D:
   m_ObjectHideFlags: 0
