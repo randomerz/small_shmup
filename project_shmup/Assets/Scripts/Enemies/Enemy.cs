@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float score;
 
-    private EnemyWave wave;
+    public EnemyWave wave;
     private ScoreManager scoreManager;
     
     public float tempHealth = 0;

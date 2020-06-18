@@ -50,6 +50,13 @@ public class AcceleratedChasePoints : MonoBehaviour
         //if (x + width > canvas.getWidth()) { x = canvas.getWidth() - width; v.x = -v.x * .5f; v.y *= .5f; }
         //if (y + height > canvas.getHeight()) { y = canvas.getHeight() - height; v.y = -v.y * .5f; v.x *= .5f; }
 
+        // restrained in box
+        //float r = width / 2;
+        //if (x < 0) { x = 0; v.x = -v.x * .5f; v.y *= .5f; }
+        //if (y < 0) { y = 0; v.y = -v.y * .5f; v.x *= .5f; }
+        //if (x + width > canvas.getWidth()) { x = canvas.getWidth() - width; v.x = -v.x * .5f; v.y *= .5f; }
+        //if (y + height > canvas.getHeight()) { y = canvas.getHeight() - height; v.y = -v.y * .5f; v.x *= .5f; }
+
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90));
         if ((points[0] - transform.position).magnitude < minDistToPoint)
         {

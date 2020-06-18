@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 24
   score: 0
+  wave: {fileID: 0}
   tempHealth: 0
 --- !u!114 &8319327418842105247
 MonoBehaviour:
@@ -115,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zygote: {fileID: 8781283747130308847, guid: 2efa5cd0e5748064db9133ca38c065dd, type: 3}
+  parentEnemy: {fileID: 8319327418842105246}
   spawnPoint: {fileID: 8319327419992395782}
   fireRate: 2
   delay: 0
