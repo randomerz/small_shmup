@@ -22,5 +22,6 @@ public class Rocket : MonoBehaviour
     }
     public float FindAngle()
     {
+        return 0;
     }
 }
