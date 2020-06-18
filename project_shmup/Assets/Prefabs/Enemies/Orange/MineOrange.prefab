@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4323829753409748129, guid: 3f31708ae34a2554c919254166641140,
+  m_Sprite: {fileID: 8472566992293150933, guid: e1b664dfd71994c4bbe01f8aef8daaa3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToExplosion: 5
+  shouldTPIn: 0
   animator: {fileID: 7960739490704967883}
   enemyScript: {fileID: 8670648388760176975}
 --- !u!114 &8781283747130308818
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c32eee0f934e96468559dd12745bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 12
   score: 0
   tempHealth: 0
 --- !u!114 &8781283747130308821

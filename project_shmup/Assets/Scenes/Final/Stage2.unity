@@ -1135,9 +1135,9 @@ MonoBehaviour:
   waves:
   - {fileID: 2164979313510607099, guid: ec24baecde8d87f49b07e53ff2af0de7, type: 3}
   - {fileID: 2164979313510607099, guid: 77775cc4c758e9c40a33a5beedcbd07b, type: 3}
-  - {fileID: 2164979313510607099, guid: ec24baecde8d87f49b07e53ff2af0de7, type: 3}
+  - {fileID: 2164979313510607099, guid: 75605b7abf7fb8142b9c1e0aaa93cf34, type: 3}
   - {fileID: 3071912871577248264, guid: 78db219422f947e48ad087068612f230, type: 3}
-  - {fileID: 2164979313510607099, guid: ec24baecde8d87f49b07e53ff2af0de7, type: 3}
+  - {fileID: 2164979313510607099, guid: dd5c8eaf7d8afff4bb0c6e43a40d5ab1, type: 3}
   - {fileID: 3868326426733371779, guid: 289d37f2d4a3d2c48bdc61a877d21651, type: 3}
   - {fileID: 2164979313510607099, guid: b46cf169ddfcfc449aa2e17fed4696a8, type: 3}
   currentWave: 0
