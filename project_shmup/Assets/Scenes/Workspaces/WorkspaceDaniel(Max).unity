@@ -299,6 +299,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingX: 18
   speed: 1.5
+  maxHealth: 300
+  sprite: 0
+  myEnemy: {fileID: 814091096}
+  spriteRenderer: {fileID: 814091093}
+  damagedOne: {fileID: 21300000, guid: 4b4162d9b4f881445bb152845da83088, type: 3}
+  damagedTwo: {fileID: 21300000, guid: 2a6b738746caa824695d7ad27d04406d, type: 3}
 --- !u!114 &814091096
 MonoBehaviour:
   m_ObjectHideFlags: 0
