@@ -3,7 +3,10 @@ guid: 9c32eee0f934e96468559dd12745bc76
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - wave: {instanceID: 0}
+  - whiteFlashMaterial: {fileID: 2100000, guid: e1c8df9f1b5e82e4da3595fe7cf7efb2,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

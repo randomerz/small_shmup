@@ -103,6 +103,7 @@ MonoBehaviour:
   score: 0
   wave: {fileID: 0}
   tempHealth: 0
+  whiteFlashMaterial: {fileID: 2100000, guid: e1c8df9f1b5e82e4da3595fe7cf7efb2, type: 2}
 --- !u!114 &8319327418842105247
 MonoBehaviour:
   m_ObjectHideFlags: 0

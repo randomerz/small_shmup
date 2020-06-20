@@ -13,9 +13,9 @@ public class Enemy : MonoBehaviour
     public float tempHealth = 0;
 
     private bool strobing;
-    private const string SHADER_COLOR_NAME = "_Color";
     private SpriteRenderer sprite;
-    private Material material;
+    public Material whiteFlashMaterial;
+    private Material oldMaterial;
 
     //public GameObject deathEffect; // we can use this to make a death effect when he explodes
 
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
             wave = transform.parent.GetComponent<EnemyWave>();
         scoreManager = GameObject.Find("Main Camera").GetComponent<ScoreManager>();
         sprite = GetComponent<SpriteRenderer>();
-        material = sprite.material;
+        oldMaterial = sprite.material;
     }
     
 
@@ -99,9 +99,9 @@ public class Enemy : MonoBehaviour
         if (_i <= _stopAt)
         {
             if (_i % 2 == 0)
-                material.SetColor(SHADER_COLOR_NAME, _toStrobe);
+                sprite.material = whiteFlashMaterial;
             else
-                material.SetColor(SHADER_COLOR_NAME, _color);
+                sprite.material = oldMaterial;
 
             yield return new WaitForSeconds(0.05f);
             StartCoroutine(StrobeColorHelper((_i + 1), _stopAt, _color, _toStrobe));

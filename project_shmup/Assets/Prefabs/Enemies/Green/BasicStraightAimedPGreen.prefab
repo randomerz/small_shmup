@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3004774518676600487}
   - component: {fileID: 3500746918400452473}
   m_Layer: 0
-  m_Name: BasicStraightAimedGreen
+  m_Name: BasicStraightAimedPGreen
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,10 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   score: 0
-  shieldPrefab: {fileID: 7627403367780569782, guid: 699270281543b8b4c90ef261625ad7cb,
-    type: 3}
-  isShielded: 0
-  shieldHealth: 0
+  wave: {fileID: 0}
+  tempHealth: 0
+  whiteFlashMaterial: {fileID: 2100000, guid: e1c8df9f1b5e82e4da3595fe7cf7efb2, type: 2}
 --- !u!114 &3004774518676600487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 0}
   numBullets: 3
   spread: 30
   fireRate: 1.5
