@@ -8,6 +8,7 @@ public class BossBehavior : MonoBehaviour
     // Start is called before the first frame update
     //boss is set at 16 pixels per unit so 1/16 for firing
     public GameObject player;
+    public GameObject missile;
     public float leftBound = -13;
     public float rightBound = 13;
     public float topBound = 9;
@@ -45,7 +46,13 @@ public class BossBehavior : MonoBehaviour
         //firePoints.Add(bullet, a);
         //Shoot(bullet);
         //firePoints.Remove(bullet);
-    }    
+    }
+    public void Missile()
+    {
+        Vector3 rot = transform.rotation.eulerAngles;
+        rot = new Vector3(rot.x, rot.y, rot.z + 180);
+        Instantiate(missile, transform.position, Quaternion.Euler(rot));
+    }
     public bool GeneratePos()
     {
         float hshift = (Math.Abs(leftBound) + Math.Abs(rightBound)) * (float)rand.NextDouble(); //horizontal shift

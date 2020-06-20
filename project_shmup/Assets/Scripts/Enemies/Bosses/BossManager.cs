@@ -39,6 +39,10 @@ public class BossManager : MonoBehaviour
         {
             Debug.Log(maxHP);
         }
+        if (health == 41)
+        {
+            behavior.Missile();
+        }
     }
     public void TakeDamage()
     {
