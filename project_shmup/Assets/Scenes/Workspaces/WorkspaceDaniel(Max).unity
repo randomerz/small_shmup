@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88865074}
   - component: {fileID: 88865073}
+  - component: {fileID: 88865075}
   m_Layer: 0
   m_Name: mortar
   m_TagString: Untagged
@@ -176,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4081864299634685803, guid: d6b709659ef726e40a77751fc2f4f8c0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -203,6 +204,27 @@ Transform:
   m_Father: {fileID: 814091094}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88865075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88865072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 88865072}
+  numBullets: 1
+  spread: 0
+  fireRate: 3
+  delay: 0
+  isAimedAtPlayerSimple: 1
+  isAimedAtPlayerPredictive: 0
+  playerMovement: {fileID: 0}
 --- !u!1 &301669353
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301669355}
   - component: {fileID: 301669354}
+  - component: {fileID: 301669356}
   m_Layer: 0
   m_Name: frontTurrets
   m_TagString: Untagged
@@ -258,7 +281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7029057795675378060, guid: d6b709659ef726e40a77751fc2f4f8c0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -285,6 +308,27 @@ Transform:
   m_Father: {fileID: 814091094}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301669356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301669353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 301669353}
+  numBullets: 3
+  spread: 30
+  fireRate: 1
+  delay: 0
+  isAimedAtPlayerSimple: 0
+  isAimedAtPlayerPredictive: 1
+  playerMovement: {fileID: 0}
 --- !u!1 &619125317
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +467,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ee18fada30380be499a422570ae34754, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -590,6 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421459916}
   - component: {fileID: 1421459915}
+  - component: {fileID: 1421459917}
   m_Layer: 0
   m_Name: backTurrets
   m_TagString: Untagged
@@ -635,7 +680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6334622105306515995, guid: d6b709659ef726e40a77751fc2f4f8c0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -662,6 +707,27 @@ Transform:
   m_Father: {fileID: 814091094}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421459917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421459914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 1421459914}
+  numBullets: 2
+  spread: 30
+  fireRate: 1.5
+  delay: 0
+  isAimedAtPlayerSimple: 0
+  isAimedAtPlayerPredictive: 1
+  playerMovement: {fileID: 0}
 --- !u!1 &1837766184
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837766185}
   - component: {fileID: 1837766186}
+  - component: {fileID: 1837766187}
   m_Layer: 0
   m_Name: gatling
   m_TagString: Untagged
@@ -731,7 +798,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7150596259065889748, guid: d6b709659ef726e40a77751fc2f4f8c0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -744,6 +811,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1837766187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837766184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bulletSpawn: {fileID: 1837766184}
+  numBullets: 1
+  spread: 0
+  fireRate: 1
+  delay: 0
+  isAimedAtPlayerSimple: 1
+  isAimedAtPlayerPredictive: 0
+  playerMovement: {fileID: 0}
 --- !u!1 &1979248779
 GameObject:
   m_ObjectHideFlags: 0
