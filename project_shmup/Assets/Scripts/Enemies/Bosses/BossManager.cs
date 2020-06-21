@@ -37,7 +37,6 @@ public class BossManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(maxHP);
         }
         if (health == 41)
         {

@@ -6,7 +6,7 @@ public class Rocket : MonoBehaviour
     public GameObject player;
     private float rotate;
     private float a;
-    private float movetimer = .5f;
+    private float movetimer = .05f;
     private float cycle = 0f;
     // Start is called before the first frame update
     void Start()
@@ -32,13 +32,13 @@ public class Rocket : MonoBehaviour
     }
     public void Move()
     {
-        transform.position = new Vector3(transform.position.x + (float)Math.Sin(transform.rotation.eulerAngles.z), transform.position.y + (float)Math.Cos(transform.rotation.eulerAngles.z),0);
+        transform.position = new Vector3((transform.position.x + (float)Math.Sin(180 - transform.rotation.eulerAngles.z))/5, (transform.position.y + (float)Math.Cos(180 - transform.rotation.eulerAngles.z))/5,0);
     }
     public float FindAngle()
     {
-        UnityEngine.Debug.Log(transform.rotation.eulerAngles);
         var y = transform.position.y - player.transform.position.y;
         var e = (180 / Math.PI) * Math.Atan((transform.position.x - player.transform.position.x) / y);
-        return (float)((-e - transform.rotation.eulerAngles.z) / 4);
+        UnityEngine.Debug.Log(e);
+        return (float)((180-e - transform.rotation.eulerAngles.z) / 6);
     }
 }

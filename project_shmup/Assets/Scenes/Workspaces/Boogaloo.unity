@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 175214480}
-  missile: {fileID: 8459672794286782685, guid: 22291a0dfa96d074d99ceb675f4b4a7d, type: 3}
+  missile: {fileID: 1937632911}
   leftBound: -13
   rightBound: 13
   topBound: 9
