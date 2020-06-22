@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseScript : MonoBehaviour
+public class PauseController : MonoBehaviour
 {
     public static bool isGamePaused = false;
+    public bool isOptionsOpened = false;
+
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
+            if (isOptionsOpened)
+            {
+                CloseOptions();
+            }
             if (isGamePaused)
             {
                 ResumeGame();
@@ -37,13 +44,20 @@ public class PauseScript : MonoBehaviour
         isGamePaused = true;
     }
 
-    public void MainMenu() 
+    public void OpenOptions()
     {
-        SceneManager.LoadScene("StartMenu");
+        optionsMenu.SetActive(true);
+        isOptionsOpened = true;
     }
 
-    public void SettingsMenu() 
+    public void CloseOptions()
     {
-        SceneManager.LoadScene("Settings");
+        optionsMenu.SetActive(false);
+        isOptionsOpened = false;
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 }
