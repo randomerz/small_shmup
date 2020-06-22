@@ -744,6 +744,8 @@ GameObject:
   - component: {fileID: 1421459916}
   - component: {fileID: 1421459915}
   - component: {fileID: 1421459917}
+  - component: {fileID: 1421459918}
+  - component: {fileID: 1421459919}
   m_Layer: 0
   m_Name: backTurrets
   m_TagString: Untagged
@@ -832,12 +834,45 @@ MonoBehaviour:
   bulletSpawn: {fileID: 1421459914}
   numBullets: 2
   spread: 30
-  fireRate: 1.5
+  fireRate: 1
   delay: 0
   baseAngle: 0
   isAimedAtPlayerSimple: 0
   isAimedAtPlayerPredictive: 1
   playerMovement: {fileID: 0}
+--- !u!95 &1421459918
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421459914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ce60f48685122a44bdae9b8f0038c05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1421459919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421459914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f34ef6e592503b44984a2ff02c7d001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1421459918}
+  weapon: {fileID: 1421459917}
 --- !u!1 &1837766184
 GameObject:
   m_ObjectHideFlags: 0
