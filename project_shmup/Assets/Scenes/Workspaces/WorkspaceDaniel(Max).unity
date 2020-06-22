@@ -222,6 +222,7 @@ MonoBehaviour:
   spread: 0
   fireRate: 3
   delay: 0
+  baseAngle: 0
   isAimedAtPlayerSimple: 1
   isAimedAtPlayerPredictive: 0
   playerMovement: {fileID: 0}
@@ -236,6 +237,8 @@ GameObject:
   - component: {fileID: 301669355}
   - component: {fileID: 301669354}
   - component: {fileID: 301669356}
+  - component: {fileID: 301669357}
+  - component: {fileID: 301669358}
   m_Layer: 0
   m_Name: frontTurrets
   m_TagString: Untagged
@@ -326,9 +329,43 @@ MonoBehaviour:
   spread: 30
   fireRate: 1
   delay: 0
-  isAimedAtPlayerSimple: 0
-  isAimedAtPlayerPredictive: 1
+  baseAngle: 0
+  isAimedAtPlayerSimple: 1
+  isAimedAtPlayerPredictive: 0
   playerMovement: {fileID: 0}
+--- !u!95 &301669357
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301669353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f74ebe690ef2ed458a5eee64c04212f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &301669358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301669353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f34ef6e592503b44984a2ff02c7d001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 301669357}
+  weapon: {fileID: 301669356}
 --- !u!1 &619125317
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,8 +503,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -322619081
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ee18fada30380be499a422570ae34754, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -534,6 +571,7 @@ MonoBehaviour:
   score: 0
   wave: {fileID: 0}
   tempHealth: 0
+  whiteFlashMaterial: {fileID: 2100000, guid: e1c8df9f1b5e82e4da3595fe7cf7efb2, type: 2}
 --- !u!60 &814091097
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -796,6 +834,7 @@ MonoBehaviour:
   spread: 30
   fireRate: 1.5
   delay: 0
+  baseAngle: 0
   isAimedAtPlayerSimple: 0
   isAimedAtPlayerPredictive: 1
   playerMovement: {fileID: 0}
@@ -900,6 +939,7 @@ MonoBehaviour:
   spread: 0
   fireRate: 1
   delay: 0
+  baseAngle: 0
   isAimedAtPlayerSimple: 1
   isAimedAtPlayerPredictive: 0
   playerMovement: {fileID: 0}

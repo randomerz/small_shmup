@@ -13,6 +13,7 @@ public class WeaponShotgun : MonoBehaviour
     public float fireRate;
     public float delay;
     private float timeTillNextShot;
+    public float baseAngle = 0;
 
     public bool isAimedAtPlayerSimple;
     public bool isAimedAtPlayerPredictive;
@@ -39,7 +40,7 @@ public class WeaponShotgun : MonoBehaviour
 
     void Shoot()
     {
-        float baseAngle = 0;
+        
         float angleSlice = 0;
         if (numBullets != 1)
             angleSlice = spread / (numBullets - 1);
@@ -118,6 +119,7 @@ public class WeaponShotgun : MonoBehaviour
             else
             {
                 Instantiate(bullet, bulletSpawn.transform.position, Quaternion.Euler(0f, 0f, a));
+                //Debug.Log(baseAngle);
             }
         }
     }
