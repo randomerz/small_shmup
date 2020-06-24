@@ -49,9 +49,7 @@ public class BossBehavior : MonoBehaviour
     }
     public void Missile()
     {
-        Vector3 rot = transform.rotation.eulerAngles;
-        rot = new Vector3(rot.x, rot.y, rot.z + 180);
-        Instantiate(missile, transform.position, Quaternion.Euler(rot));
+        Instantiate(missile, transform.position, Quaternion.Euler(new Vector3(0, 0, transform.rotation.eulerAngles.z + 180)));
     }
     public bool GeneratePos()
     {

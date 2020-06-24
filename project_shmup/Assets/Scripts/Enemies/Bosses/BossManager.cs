@@ -28,6 +28,7 @@ public class BossManager : MonoBehaviour
             if (cycle >= shift)
             {
                 behavior.Teleport();
+                behavior.Missile();
                 cycle = 0f;
                 if(maxHP *.75 > health)
                 {

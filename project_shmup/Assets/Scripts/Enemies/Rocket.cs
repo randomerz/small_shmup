@@ -1,44 +1,72 @@
 ﻿using UnityEngine;
 using System;
+using System.Security.Cryptography;
+using System.Collections.Specialized;
 
 public class Rocket : MonoBehaviour
 {
-    public GameObject player;
+    public float speed;
+    public float rspeed;
+
+    private Transform player;
     private float rotate;
     private float a;
     private float movetimer = .05f;
     private float cycle = 0f;
+    private Vector2 x;
+    private float hyp;
+    private double e;
+    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
-        cycle += Time.deltaTime;
         if (cycle >= movetimer)
         {
             cycle = 0f;
-            a = FindAngle();
-            transform.Rotate(0f, 0f, a);
-            Move();
+            rb.angularVelocity = FindAngle() * rspeed;
+            rb.velocity = transform.up * speed;
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        cycle += Time.deltaTime;
     }
-    public void Move()
+    float FindAngle()
     {
-        transform.position = new Vector3((transform.position.x + (float)Math.Sin(180 - transform.rotation.eulerAngles.z))/5, (transform.position.y + (float)Math.Cos(180 - transform.rotation.eulerAngles.z))/5,0);
-    }
-    public float FindAngle()
-    {
-        var y = transform.position.y - player.transform.position.y;
-        var e = (180 / Math.PI) * Math.Atan((transform.position.x - player.transform.position.x) / y);
+        /*x = transform.position.x - player.transform.position.x;
+        hyp = Vector3.Distance(transform.position, player.transform.position);
+        e = (180 / Math.PI) * Math.Asin((transform.position.x - player.transform.position.x) / hyp);
         UnityEngine.Debug.Log(e);
-        return (float)((180-e - transform.rotation.eulerAngles.z) / 6);
+        UnityEngine.Debug.Log(transform.rotation.eulerAngles.z);
+        if (transform.position.y - player.transform.position.y > 0)
+        {
+            e = 180 - e;
+        }   
+        return (float)((e - transform.rotation.eulerAngles.z) / 6);*/
+        //x = new Vector3((float)Math.Cos((Math.PI / 180) * transform.rotation.eulerAngles.z), (float)Math.Sin((Math.PI / 180) * transform.rotation.eulerAngles.z));
+        //UnityEngine.Debug.Log((float)Vector3.Angle(v, player.transform.position - transform.position));
+        if(Vector3.Cross(transform.up, player.transform.position - transform.position).z < 0)
+        {
+            return -(float)Vector3.Angle(transform.up, player.transform.position - transform.position);
+        }
+        else
+        {
+            return (float)Vector3.Angle(transform.up, player.transform.position - transform.position);
+        }
+        //return (float)Vector3.Angle(v, player.transform.position-transform.position);
+        //The real version
+        //return 0f;
+        void OnTriggerEnter2D()
+        {
+            Destroy(gameObject);
+        }
     }
 }
