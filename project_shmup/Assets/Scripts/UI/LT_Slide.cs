@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class LT_Slide : MonoBehaviour
 {
-    public AnimationCurve curve;
+    public AnimationCurve curveIn;
+    public AnimationCurve curveOut;
     public LeanTweenType inType;
     public LeanTweenType outType;
 
-    public float newX = 0;
-    public float newY = 0;
+    public Vector3 newPos;
     public float time = 0.5f;
 
-    public void Slide()
+    public void SlideIn()
     {
-        LeanTween.moveLocal(gameObject, new Vector3(newX, newY, 0), time).setOnComplete(Close).setEase(outType);
+        if (inType == LeanTweenType.animationCurve)
+            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(curveIn);
+        else
+            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(inType);
+    }
+
+    public void SlideOut()
+    {
+        if (outType == LeanTweenType.animationCurve)
+            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(curveOut);
+        else
+            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(outType);
     }
 
     public void Close()
