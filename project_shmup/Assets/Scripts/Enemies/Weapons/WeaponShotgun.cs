@@ -9,11 +9,13 @@ public class WeaponShotgun : MonoBehaviour
     public int numBullets;
     public float spread; // degrees of total cone
     private ProjectileManager bulletManager;
-    //idk why this has to be static
     public float fireRate;
     public float delay;
     private float timeTillNextShot;
     public float baseAngle = 0;
+
+    public float angleOffset = 0;
+    public float radialOffset = 0;
 
     public bool isAimedAtPlayerSimple;
     public bool isAimedAtPlayerPredictive;
@@ -21,6 +23,10 @@ public class WeaponShotgun : MonoBehaviour
 
     void Start()
     {
+        if (bulletSpawn == null)
+        {
+            bulletSpawn = this.gameObject;
+        }
         bulletManager = GameObject.Find("Main Camera").GetComponent<ProjectileManager>();
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         timeTillNextShot = delay;
@@ -40,7 +46,6 @@ public class WeaponShotgun : MonoBehaviour
 
     void Shoot()
     {
-        
         float angleSlice = 0;
         if (numBullets != 1)
             angleSlice = spread / (numBullets - 1);
@@ -109,16 +114,17 @@ public class WeaponShotgun : MonoBehaviour
 
         for (int i = 0; i < numBullets; i++)
         {
-            float a = baseAngle - (spread / 2f) + (i * angleSlice);
+            float a = baseAngle - (spread / 2f) + (i * angleSlice) + angleOffset;
+            Vector3 offset = new Vector3(radialOffset * Mathf.Cos((a + 90) * Mathf.Deg2Rad), radialOffset * Mathf.Sin((a + 90) * Mathf.Deg2Rad), 0);
             if (bulletManager != null)
             {
                 GameObject b = bulletManager.CreateEnemyBullet(bullet).gameObject;
-                b.transform.position = transform.position;
+                b.transform.position = transform.position + offset;
                 b.transform.rotation = Quaternion.Euler(0, 0, a);
             }
             else
             {
-                Instantiate(bullet, bulletSpawn.transform.position, Quaternion.Euler(0f, 0f, a));
+                Instantiate(bullet, bulletSpawn.transform.position + offset, Quaternion.Euler(0f, 0f, a));
                 //Debug.Log(baseAngle);
             }
         }
