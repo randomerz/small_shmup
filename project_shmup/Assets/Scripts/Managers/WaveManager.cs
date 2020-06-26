@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public GameObject[] waves;
     public int currentWave;
     public bool infinite = false;
@@ -58,5 +60,7 @@ public class WaveManager : MonoBehaviour
     public void StageComplete()
     {
         Debug.Log("Stage Complete!");
+        if (gameManager != null)
+            gameManager.StageComplete();
     }
 }
