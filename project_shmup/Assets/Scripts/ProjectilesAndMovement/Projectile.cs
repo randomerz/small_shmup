@@ -37,8 +37,15 @@ public class Projectile : MonoBehaviour
             PlayerHealth player = collision.GetComponent<PlayerHealth>();
             if (player != null)
                 player.TakeLife();
+            if (gameObject.tag.Equals("SpecialBullet"))
+            {
+
+            }
+            else
+            {
+                RemoveBullet();
+            }
             //Instantiate(impactEffect, transform.position, transform.rotation); // similar to deathEffect, if we want an animation for impact
-            RemoveBullet();
         }
     }
 
