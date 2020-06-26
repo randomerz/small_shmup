@@ -61,16 +61,18 @@ public class PlayerWeapon : MonoBehaviour
 
     void Shoot() // shoots ;)
     {
-        if (bulletManager != null)
+        if (canShoot == true)
         {
-            GameObject b = bulletManager.CreatePlayerBullet(playerBullet, firePoint).gameObject;
-            //Debug.Log(firePoint.position);
+            if (bulletManager != null)
+            {
+                GameObject b = bulletManager.CreatePlayerBullet(playerBullet, firePoint).gameObject;
+                //Debug.Log(firePoint.position);
+            }
+            else
+            {
+                Instantiate(playerBullet, firePoint.position, firePoint.rotation); // creates a bullet at firepoint
+            }
         }
-        else
-        {
-            Instantiate(playerBullet, firePoint.position, firePoint.rotation); // creates a bullet at firepoint
-        }
-        
     }
 
     void Bomb() // does not actually make a bomb. it clears the screen of bullets and flashes white. **EPILEPSY WARNING!**
