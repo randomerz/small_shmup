@@ -235,7 +235,7 @@ MonoBehaviour:
   bombList: []
   bomb: {fileID: 21300000, guid: 0e5a5b05bfec3fe42ba665ed9ecb5875, type: 3}
   myCG: {fileID: 0}
-  canShoot: 0
+  canShoot: 1
 --- !u!61 &2250968397489643859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,6 +282,8 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 21300000, guid: 677af3cc33e747f42b143ab5459dbbc1, type: 3}
   brokenHeart: {fileID: 21300000, guid: f5297743f04bbaf46a61ae8b83396a5e, type: 3}
+  timeSinceDmg: 0
+  audioSource: {fileID: 0}
 --- !u!50 &-2836029982078046227
 Rigidbody2D:
   serializedVersion: 4

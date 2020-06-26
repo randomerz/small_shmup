@@ -21,7 +21,7 @@ public class PlayerWeapon : MonoBehaviour
     public CanvasGroup myCG;
     private bool flash = false;
 
-    public bool canShoot;
+    public bool canShoot = true;
 
     void Start()
     {
