@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bullet: {fileID: 679075310197038807, guid: c1b03df5a606c7044ba16de539c533f9, type: 3}
   bulletSpawn: {fileID: 0}
   numBullets: 18
   spread: 360
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bullet: {fileID: 679075310197038807, guid: c1b03df5a606c7044ba16de539c533f9, type: 3}
   bulletSpawn: {fileID: 0}
   numBullets: 18
   spread: 360
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0124001bbbf1b4f89bc5fddf7b9a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5461989681818812368, guid: 85c9f9a23b73e1d44b2d4af788927eaf, type: 3}
+  bullet: {fileID: 679075310197038807, guid: c1b03df5a606c7044ba16de539c533f9, type: 3}
   bulletSpawn: {fileID: 0}
   numBullets: 18
   spread: 360
