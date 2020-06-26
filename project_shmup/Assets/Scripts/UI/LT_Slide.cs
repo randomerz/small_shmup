@@ -8,28 +8,44 @@ public class LT_Slide : MonoBehaviour
     public AnimationCurve curveOut;
     public LeanTweenType inType;
     public LeanTweenType outType;
-
-    public Vector3 newPos;
+    
     public float time = 0.5f;
 
-    public void SlideIn()
+    public void SlideTo(Vector3 to)
     {
         if (inType == LeanTweenType.animationCurve)
-            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(curveIn);
+            LeanTween.moveLocal(gameObject, to, time).setEase(curveIn);
         else
-            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(inType);
+            LeanTween.moveLocal(gameObject, to, time).setEase(inType);
     }
 
-    public void SlideOut()
+    public void SlideToDelayDisable(Vector3 to)
     {
         if (outType == LeanTweenType.animationCurve)
-            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(curveOut);
+            LeanTween.moveLocal(gameObject, to, time).setEase(curveOut).setOnComplete(DisableMe);
         else
-            LeanTween.moveLocal(gameObject, newPos, time).setOnComplete(Close).setEase(outType);
+            LeanTween.moveLocal(gameObject, to, time).setEase(outType).setOnComplete(DisableMe);
     }
 
-    public void Close()
+    public void SlideToDelay(Vector3 to, float delay)
     {
-        Debug.Log("closed stats");
+        if (outType == LeanTweenType.animationCurve)
+            LeanTween.moveLocal(gameObject, to, time).setEase(curveOut).setDelay(delay);
+        else
+            LeanTween.moveLocal(gameObject, to, time).setEase(outType).setDelay(delay);
+    }
+
+    public void SlideToDelayDisable(Vector3 to, float delay)
+    {
+        if (outType == LeanTweenType.animationCurve)
+            LeanTween.moveLocal(gameObject, to, time).setEase(curveOut).setDelay(delay).setOnComplete(DisableMe);
+        else
+            LeanTween.moveLocal(gameObject, to, time).setEase(outType).setDelay(delay).setOnComplete(DisableMe);
+    }
+
+
+    private void DisableMe()
+    {
+        gameObject.SetActive(false);
     }
 }
