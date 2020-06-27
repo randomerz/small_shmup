@@ -15,10 +15,12 @@ public class PlayerHealth : MonoBehaviour
     private bool strobing;
 
     public AudioSource audioSource;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("Main Camera").GetComponent<GameManager>();
         DisplayHP();
     }
 
@@ -31,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeLife()
     {
-        if (timeSinceDmg > 1.0)
+        if (timeSinceDmg > 1.2f)
         {
             timeSinceDmg = 0;
             if (currentHearts >= 1)
@@ -39,15 +41,11 @@ public class PlayerHealth : MonoBehaviour
                 currentHearts -= 1;
                 DisplayHP(); // change the hp on the screen
                 Debug.Log("Life lost.");
-                audioSource.Play();
-                // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
+                //audioSource.Play();
+                StrobeAlpha(3, 0.5f);
                 if (currentHearts <= 0)
                 {
                     Die();
-                }
-                else
-                {
-                    StrobeAlpha(5, 0.5f);
                 }
             }
         }
@@ -72,9 +70,16 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
+        // Instantiate( deathEffect, transform.position, Quaternion.identity); // death effect for player.
         //pull a game over//
-        Debug.Log("You died.");
-
+        if (gameManager != null)
+        {
+            gameManager.GameOver();
+        }
+        else
+        {
+            Debug.Log("You died.");
+        }
     }
 
     public void StrobeColor(int _strobeCount, Color _toStrobe)
