@@ -39,7 +39,7 @@ public class PlayerWeapon : MonoBehaviour
             Fade();
         }
 
-        if (timeSinceLastShot > fireRate)
+        if (timeSinceLastShot > fireRate && canShoot)
         {
             if (Input.GetButton("Fire1"))
             {
@@ -48,7 +48,7 @@ public class PlayerWeapon : MonoBehaviour
             }
         }
 
-        if (timeSinceLastBomb > bombRate)
+        if (timeSinceLastBomb > bombRate && canShoot)
         {
             if (Input.GetButton("Fire2"))
             {

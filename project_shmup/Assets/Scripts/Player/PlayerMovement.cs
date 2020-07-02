@@ -36,78 +36,86 @@ public class PlayerMovement : MonoBehaviour
         bool rightPressed = false;
         bool upPressed = false;
         bool downPressed = false;
-        
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+
+        if (canMove)
         {
-            leftPressed = true;
-        }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            rightPressed = true;
-        }
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            upPressed = true;
-        }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            downPressed = true;
-        }
-        if (leftPressed && rightPressed)
-        {
-            if (holdingTwoHori)
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
-                move.x = prev.x;
-            } else
-            {
-                move.x = prev.x * -1;
-                holdingTwoHori = true;
+                leftPressed = true;
             }
-        } else
-        {
-            holdingTwoHori = false;
-            if (leftPressed)
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
-                move.x = -1;
+                rightPressed = true;
             }
-            if(rightPressed)
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             {
-                move.x = 1;
+                upPressed = true;
             }
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            {
+                downPressed = true;
+            }
+            if (leftPressed && rightPressed)
+            {
+                if (holdingTwoHori)
+                {
+                    move.x = prev.x;
+                }
+                else
+                {
+                    move.x = prev.x * -1;
+                    holdingTwoHori = true;
+                }
+            }
+            else
+            {
+                holdingTwoHori = false;
+                if (leftPressed)
+                {
+                    move.x = -1;
+                }
+                if (rightPressed)
+                {
+                    move.x = 1;
+                }
+            }
+            if (upPressed && downPressed)
+            {
+                if (holdingTwoVert)
+                {
+                    move.y = prev.y;
+                }
+                else
+                {
+                    move.y = prev.y * -1;
+                    holdingTwoVert = true;
+                }
+            }
+            else
+            {
+                holdingTwoVert = false;
+                if (downPressed)
+                {
+                    move.y = -1;
+                }
+                if (upPressed)
+                {
+                    move.y = 1;
+                }
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                move = move * focusModifier;
+                isFocused = true;
+                shipFocus.SetActive(true);
+            }
+            else
+            {
+                isFocused = false;
+                shipFocus.SetActive(false);
+            }
+            // player movement calculations end here ////////////////////////////////////////////////////////
         }
-        if (upPressed && downPressed)
-        {
-            if(holdingTwoVert)
-            {
-                move.y = prev.y;
-            } else
-            {
-                move.y = prev.y * -1;
-                holdingTwoVert = true;
-            }
-        } else
-        {
-            holdingTwoVert = false;
-            if(downPressed)
-            {
-                move.y = -1;
-            }
-            if(upPressed)
-            {
-                move.y = 1;
-            }
-        }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            move = move * focusModifier;
-            isFocused = true;
-            shipFocus.SetActive(true);
-        } else
-        {
-            isFocused = false;
-            shipFocus.SetActive(false);
-        }
-        // player movement calculations end here ////////////////////////////////////////////////////////
     }
     
     void FixedUpdate()
