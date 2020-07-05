@@ -1,0 +1,1499 @@
+fileFormatVersion: 2
+guid: 4f47826bf28627e4cb78c44832ba3f2d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2332490627602175536
+    second: freighter_guns_0
+  - first:
+      213: 6025888319697484349
+    second: freighter_guns_1
+  - first:
+      213: -7399752623504598894
+    second: freighter_guns_2
+  - first:
+      213: 2576188329212020631
+    second: freighter_guns_3
+  - first:
+      213: 984675437601509283
+    second: freighter_guns_4
+  - first:
+      213: 5070851316098139708
+    second: freighter_guns_5
+  - first:
+      213: -6857489445336016304
+    second: freighter_guns_6
+  - first:
+      213: 2838773611788820407
+    second: freighter_guns_7
+  - first:
+      213: -9042642246088617818
+    second: freighter_guns_8
+  - first:
+      213: 5116678123583673475
+    second: freighter_guns_9
+  - first:
+      213: -1086630184291970703
+    second: freighter_guns_10
+  - first:
+      213: -4707703480086147501
+    second: freighter_guns_11
+  - first:
+      213: 6307892830211990752
+    second: freighter_guns_12
+  - first:
+      213: -6142790765760599066
+    second: freighter_guns_13
+  - first:
+      213: -1934054742779213451
+    second: freighter_guns_14
+  - first:
+      213: 4482820282465218428
+    second: freighter_guns_15
+  - first:
+      213: 5138148075579435968
+    second: freighter_guns_16
+  - first:
+      213: 4044339049300484805
+    second: freighter_guns_17
+  - first:
+      213: 3750762425294099294
+    second: freighter_guns_18
+  - first:
+      213: -4778344938658494524
+    second: freighter_guns_19
+  - first:
+      213: -5738887277345183256
+    second: freighter_guns_20
+  - first:
+      213: 8535786964842276537
+    second: freighter_guns_21
+  - first:
+      213: -8813037939861633894
+    second: freighter_guns_22
+  - first:
+      213: 3856518998782968354
+    second: freighter_guns_23
+  - first:
+      213: 1917142536075801773
+    second: freighter_guns_24
+  - first:
+      213: -6997979177152079966
+    second: freighter_guns_25
+  - first:
+      213: 6506528531337961648
+    second: freighter_guns_26
+  - first:
+      213: -3800892378184082743
+    second: freighter_guns_27
+  - first:
+      213: 3304665527688291505
+    second: freighter_guns_28
+  - first:
+      213: 4210962316431823611
+    second: freighter_guns_29
+  - first:
+      213: 2042594864390536562
+    second: freighter_guns_30
+  - first:
+      213: 764024193335661150
+    second: freighter_guns_31
+  - first:
+      213: 594281271926241636
+    second: freighter_guns_32
+  - first:
+      213: -2654009413909403648
+    second: freighter_guns_33
+  - first:
+      213: -8311199724309154564
+    second: freighter_guns_34
+  - first:
+      213: 4179269738535533422
+    second: freighter_guns_35
+  - first:
+      213: -8874571241276258355
+    second: freighter_guns_36
+  - first:
+      213: -6342285907924086121
+    second: freighter_guns_37
+  - first:
+      213: -3694756142882330110
+    second: freighter_guns_0
+  - first:
+      213: 7539903804794992568
+    second: freighter_guns_1
+  - first:
+      213: -7379840867915928060
+    second: freighter_guns_2
+  - first:
+      213: 981204637054312339
+    second: freighter_guns_3
+  - first:
+      213: -2364714443134411149
+    second: freighter_guns_4
+  - first:
+      213: -41722676432506863
+    second: freighter_guns_9
+  - first:
+      213: -6993128621309412621
+    second: freighter_guns_10
+  - first:
+      213: 5383370859433761361
+    second: freighter_guns_11
+  - first:
+      213: 8187798357915431936
+    second: freighter_guns_12
+  - first:
+      213: -7915687186305629094
+    second: freighter_guns_13
+  - first:
+      213: 3939005083424538563
+    second: freighter_guns_14
+  - first:
+      213: -8619497866532782455
+    second: freighter_guns_20
+  - first:
+      213: 2385575053205658452
+    second: freighter_guns_21
+  - first:
+      213: 2076083928978467883
+    second: freighter_guns_22
+  - first:
+      213: 4725060844971461913
+    second: freighter_guns_23
+  - first:
+      213: -4065561719754164322
+    second: freighter_guns_24
+  - first:
+      213: 7913043295747050416
+    second: freighter_guns_25
+  - first:
+      213: -4411379734135076572
+    second: freighter_guns_26
+  - first:
+      213: 4065108163408871282
+    second: freighter_guns_27
+  - first:
+      213: -1321484598831383320
+    second: freighter_guns_28
+  - first:
+      213: -348777946408437728
+    second: freighter_guns_29
+  - first:
+      213: 5113085766537529089
+    second: freighter_guns_38
+  - first:
+      213: 451032711487647723
+    second: freighter_guns_39
+  - first:
+      213: 4770271922985272420
+    second: freighter_guns_40
+  - first:
+      213: 8107309740666496322
+    second: freighter_guns_41
+  - first:
+      213: 7195388407301844826
+    second: freighter_guns_42
+  - first:
+      213: -3229294840367097887
+    second: freighter_guns_43
+  - first:
+      213: 644152504279962084
+    second: freighter_guns_44
+  - first:
+      213: 6582461144555685032
+    second: freighter_guns_45
+  - first:
+      213: -5934841054792511561
+    second: freighter_guns_46
+  - first:
+      213: -2381277992771105420
+    second: freighter_guns_47
+  - first:
+      213: -1702874572478943565
+    second: freighter_guns_48
+  - first:
+      213: -4754531070974866600
+    second: freighter_guns_49
+  - first:
+      213: 8549768127591048011
+    second: freighter_guns_50
+  - first:
+      213: 254039607453332049
+    second: freighter_guns_51
+  - first:
+      213: -8756261974205237479
+    second: freighter_guns_52
+  - first:
+      213: -6031698352404022615
+    second: freighter_guns_53
+  - first:
+      213: -5616507007464550358
+    second: freighter_guns_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: freighter_guns_5
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 526
+        width: 27
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c360adcc7684f5640800000000000000
+      internalID: 5070851316098139708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_6
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a91c79ead45d0a0800000000000000
+      internalID: -6857489445336016304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_7
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfdc683f89556720800000000000000
+      internalID: 2838773611788820407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a092f289c4128280800000000000000
+      internalID: -9042642246088617818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_15
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 523
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f6140cb4d263e30800000000000000
+      internalID: 4482820282465218428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_16
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 492
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbe440a37e5e4740800000000000000
+      internalID: 5138148075579435968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_17
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 509
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2ebc000f0602830800000000000000
+      internalID: 4044339049300484805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 492
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53998cad826d0430800000000000000
+      internalID: 3750762425294099294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_19
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 508
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c789f45898efadb0800000000000000
+      internalID: -4778344938658494524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 240
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27df8000531c85c10800000000000000
+      internalID: 2042594864390536562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 244
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e529393b4fb5a9a00800000000000000
+      internalID: 764024193335661150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_32
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 247
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469b4dd0baf4f3800800000000000000
+      internalID: 594281271926241636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_33
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 251
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0082365ef701b2bd0800000000000000
+      internalID: -2654009413909403648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 236
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf47a37a2efa8ac80800000000000000
+      internalID: -8311199724309154564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_35
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 236
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b33f93fafbff930800000000000000
+      internalID: 4179269738535533422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 236
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7c4ddb97037d480800000000000000
+      internalID: -8874571241276258355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_37
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7921832d19cabf7a0800000000000000
+      internalID: -6342285907924086121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_0
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 536
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a6ecb1dd699bcc0800000000000000
+      internalID: -3694756142882330110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 535
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7fb65ff8e13a860800000000000000
+      internalID: 7539903804794992568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_2
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 532
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ee5f8a4d9859990800000000000000
+      internalID: -7379840867915928060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_3
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 528
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f96933b60fd9d00800000000000000
+      internalID: 981204637054312339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_4
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 528
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37edcb52eb8de2fd0800000000000000
+      internalID: -2364714443134411149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_9
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11079246275cb6ff0800000000000000
+      internalID: -41722676432506863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_10
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa3c32f19a63fe90800000000000000
+      internalID: -6993128621309412621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_11
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a1dba364395ba40800000000000000
+      internalID: 5383370859433761361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_12
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 524
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0047318c937e0a170800000000000000
+      internalID: 8187798357915431936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_13
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 524
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5444237174d52290800000000000000
+      internalID: -7915687186305629094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_14
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 524
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf3afde0482aa630800000000000000
+      internalID: 3939005083424538563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_20
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 508
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e7313cb54616880800000000000000
+      internalID: -8619497866532782455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_21
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 492
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b5b5f1fd34b1120800000000000000
+      internalID: 2385575053205658452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_22
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 507
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ca8a6755bbfcc10800000000000000
+      internalID: 2076083928978467883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_23
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 507
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d81a6ddc9c29140800000000000000
+      internalID: 4725060844971461913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_24
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 492
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9770a9f7293497c0800000000000000
+      internalID: -4065561719754164322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_25
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 507
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb0a4fc3f6c0dd60800000000000000
+      internalID: 7913043295747050416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_26
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 507
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42985891181a7c2c0800000000000000
+      internalID: -4411379734135076572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_27
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 492
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fb685365a2a6830800000000000000
+      internalID: 4065108163408871282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_28
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 506
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec718642c429ade0800000000000000
+      internalID: -1321484598831383320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_29
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 506
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028b5de3e44e82bf0800000000000000
+      internalID: -348777946408437728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_38
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10743941a6455f640800000000000000
+      internalID: 5113085766537529089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_39
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef6d468cd3624600800000000000000
+      internalID: 451032711487647723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_40
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4648e8b3a09633240800000000000000
+      internalID: 4770271922985272420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_41
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245ad783143f28070800000000000000
+      internalID: 8107309740666496322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_42
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 236
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fa03632a72bd360800000000000000
+      internalID: 7195388407301844826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_43
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 238
+        width: 27
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7dae4c37d3f23d0800000000000000
+      internalID: -3229294840367097887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_44
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 204
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e119ce2a4d70f800800000000000000
+      internalID: 644152504279962084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_45
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 219
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a48d0d1989995b50800000000000000
+      internalID: 6582461144555685032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_46
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 219
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf00ba318533ada0800000000000000
+      internalID: -5934841054792511561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_47
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 204
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d4c69384004fed0800000000000000
+      internalID: -2381277992771105420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_48
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 219
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bee85a399c2e58e0800000000000000
+      internalID: -1702874572478943565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_49
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 219
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b4cf87e23840eb0800000000000000
+      internalID: -4754531070974866600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_50
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 204
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43650d30d0e6a670800000000000000
+      internalID: 8549768127591048011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_51
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 220
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152b2215da7868300800000000000000
+      internalID: 254039607453332049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_52
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 220
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9177c3b80228b7680800000000000000
+      internalID: -8756261974205237479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_53
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 204
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa36a84e4a1b4ca0800000000000000
+      internalID: -6031698352404022615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: freighter_guns_54
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 221
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20559d52a82e02b0800000000000000
+      internalID: -5616507007464550358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
