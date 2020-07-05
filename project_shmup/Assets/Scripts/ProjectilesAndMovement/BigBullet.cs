@@ -6,26 +6,30 @@ public class BigBullet : MonoBehaviour
 {
 
     public float timeToExplosion = 6.0f;
-    private float timeSinceExplosion = 0;
+    public float timeSinceExplosion = 0;
     private bool exploding = false;
     public Projectile projectile;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeToExplosion = timeToExplosion - 0.4f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (exploding == false)
+        timeToExplosion -= Time.deltaTime;
+        if (timeToExplosion <= 0)
         {
-            timeToExplosion -= Time.deltaTime;
-            if (timeToExplosion <= 0)
+            timeSinceExplosion += Time.deltaTime;
+            if (timeSinceExplosion >= 0.5f)
             {
                 projectile.RemoveBullet();
             }
+            animator.SetBool("explode", true);
         }
     }
 }

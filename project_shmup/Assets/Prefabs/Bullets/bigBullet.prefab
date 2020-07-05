@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7640741544597001190, guid: 92440433f30177848bae9d94b8139bf1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToExplosion: 4.51
   projectile: {fileID: 5468810233867263043}
+  animator: {fileID: 5468810233867263098}
 --- !u!58 &5468810233867263042
 CircleCollider2D:
   m_ObjectHideFlags: 0
