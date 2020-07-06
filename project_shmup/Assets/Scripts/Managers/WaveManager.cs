@@ -9,7 +9,8 @@ public class WaveManager : MonoBehaviour
     public GameObject[] waves;
     public int currentWave;
     public bool infinite = false;
-    
+
+    public float stageCompleteDelay = 0f;
 
     void Start()
     {
@@ -60,7 +61,14 @@ public class WaveManager : MonoBehaviour
     public void StageComplete()
     {
         Debug.Log("Stage Complete!");
+        StartCoroutine("PushStageComplete", stageCompleteDelay);
+    }
+
+    private IEnumerator PushStageComplete(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         if (gameManager != null)
             gameManager.StageComplete();
+        yield return null;
     }
 }

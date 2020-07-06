@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 107056951}
+    - target: {fileID: 3998892841874731210, guid: f0ef303d0b3d142debc34c6edc9d697a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4472182778426144777, guid: f0ef303d0b3d142debc34c6edc9d697a,
         type: 3}
       propertyPath: bombList.Array.size
@@ -994,6 +999,9 @@ MonoBehaviour:
   stageCompleteVector: {x: 2220, y: 0, z: 0}
   statsVector: {x: 2520, y: 0, z: 0}
   restartVector: {x: 2520, y: 0, z: 0}
+  statsTitle: {fileID: 39159354}
+  statsScore: {fileID: 1374865669}
+  statsTime: {fileID: 2071992580}
 --- !u!1 &415264867
 GameObject:
   m_ObjectHideFlags: 0
@@ -6471,8 +6479,10 @@ MonoBehaviour:
   - {fileID: 2164979313510607099, guid: 2a0081b44972e0b4187f2507db82767b, type: 3}
   - {fileID: 2164979313510607099, guid: e36473fcae6b4da49aede9b35648ce25, type: 3}
   - {fileID: 3993921380581998113, guid: ac6b81b865abca54bbab19db4a7919b0, type: 3}
-  currentWave: 0
+  - {fileID: 2164979313510607099, guid: ec24baecde8d87f49b07e53ff2af0de7, type: 3}
+  currentWave: 7
   infinite: 0
+  stageCompleteDelay: 1
 --- !u!114 &1979248785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6491,7 +6501,7 @@ MonoBehaviour:
   projManager: {fileID: 1979248783}
   soundManager: {fileID: 0}
   stageCompleteController: {fileID: 359667297}
-  currentStage: 0
+  currentStage: 1
 --- !u!1 &1988749743
 GameObject:
   m_ObjectHideFlags: 0

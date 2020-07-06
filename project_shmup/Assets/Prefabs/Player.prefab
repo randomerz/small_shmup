@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 4472182778426144777}
   - component: {fileID: 2250968397489643859}
   - component: {fileID: 3848773521390399096}
+  - component: {fileID: 3998892841874731210}
   - component: {fileID: -2836029982078046227}
   m_Layer: 0
   m_Name: Player
@@ -276,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHearts: 3
   maxHearts: 3
+  canTakeDamage: 1
   hearts:
   - {fileID: 0}
   - {fileID: 0}
@@ -284,6 +286,24 @@ MonoBehaviour:
   brokenHeart: {fileID: 21300000, guid: f5297743f04bbaf46a61ae8b83396a5e, type: 3}
   timeSinceDmg: 0
   audioSource: {fileID: 0}
+--- !u!114 &3998892841874731210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472182778426144781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be090dfa170710429ea5937b81cbddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v: {x: 0, y: -10, z: 0}
+  a: {x: 0, y: 75, z: 0}
+  restraintLeftBound: -9
+  restraintRightBound: 9
+  restraintTopBound: 12
+  restraintBottomBound: -9
 --- !u!50 &-2836029982078046227
 Rigidbody2D:
   serializedVersion: 4

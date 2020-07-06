@@ -12,13 +12,21 @@ public class GameManager : MonoBehaviour
     public SoundManager soundManager;
     // public DialogueManager dialogueManager;
 
+    private PlayerHealth playerHealth;
+    private PlayerMovement playerMovement;
+    private PlayerWeapon playerWeapon;
+
     public StageCompleteController stageCompleteController;
 
     public int currentStage;
+    private float stageStartTime;
+    private float stageFinishTime;
 
     void Start()
     {
-        
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerWeapon = player.GetComponent<PlayerWeapon>();
     }
     
     void Update()
@@ -29,17 +37,19 @@ public class GameManager : MonoBehaviour
     // might not be needed if we just restart the scene each time
     public void StartGame()
     {
-        player.GetComponent<PlayerMovement>().canMove = true;
-        player.GetComponent<PlayerWeapon>().canShoot = true;
-        player.GetComponent<PlayerHealth>().currentHearts = player.GetComponent<PlayerHealth>().maxHearts;
+        playerMovement.canMove = true;
+        playerWeapon.canShoot = true;
+        playerHealth.currentHearts = player.GetComponent<PlayerHealth>().maxHearts;
         scoreManager.score = 0;
+        stageStartTime = Time.time;
     }
 
     public void StageComplete()
     {
+        stageFinishTime = Time.time;
         stageCompleteController.OpenStageComplete();
-        player.GetComponent<PlayerWeapon>().canShoot = false;
-        StartCoroutine("StartDialogueDelay", 2.25f); // .75 + (1.5 - .75) + .75
+        playerWeapon.canShoot = false;
+        StartCoroutine(StartDialogueDelay(2.25f)); // .75 + (1.5 - .75) + .75
     }
 
     public IEnumerator StartDialogueDelay(float delay)
@@ -57,19 +67,31 @@ public class GameManager : MonoBehaviour
 
     public void StageCompleteStats()
     {
-        stageCompleteController.OpenStats();
+        stageCompleteController.OpenStats(currentStage, 123456789, stageFinishTime - stageStartTime);
     }
 
     public void NextStage()
     {
         stageCompleteController.CloseStats();
         Debug.Log("open next scene after animation");
+        StartCoroutine(StartNextStageDelay(1f)); // .75 + (1.5 - .75) + .75
+    }
+
+    public IEnumerator StartNextStageDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        playerMovement.canMove = false;
+        player.GetComponent<Accelerated>().enabled = true;
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Loading Scene " + (currentStage + 1));
+        SceneManager.LoadScene("Stage" + (currentStage + 1));
+        yield return null;
     }
 
     public void GameOver()
     {
-        player.GetComponent<PlayerMovement>().canMove = false;
-        player.GetComponent<PlayerWeapon>().canShoot = false;
+        playerMovement.canMove = false;
+        playerWeapon.canShoot = false;
         stageCompleteController.OpenRestart();
     }
 

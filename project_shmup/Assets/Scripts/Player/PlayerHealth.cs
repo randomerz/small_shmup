@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public float currentHearts;
     public float maxHearts;
+    public bool canTakeDamage = true;
+
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite brokenHeart;
